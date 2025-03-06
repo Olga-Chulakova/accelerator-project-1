@@ -1,0 +1,15 @@
+.button {
+  display: block;
+  font-family: $roboto;
+  font-weight: 700;
+  font-size: $font-size-12;
+  line-height: 12px;
+  text-align: center;
+  color: $color-basis;
+  padding: 22px;
+  border: 2px solid $color-basis;
+  background-color: transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}

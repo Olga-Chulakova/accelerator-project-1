@@ -1,0 +1,9 @@
+$alumni: "Alumni", "Arial", sans-serif;
+$roboto: "Roboto", "Arial", sans-serif;
+$arial: "Arial", sans-serif;
+
+@include font-face("Alumni", 600, normal, url("../../fonts/alumni-sans/alumni-sans-600.woff2") format("woff2"), url("../../fonts/alumni-sans/alumni-sans-600.woff") format("woff"));
+@include font-face("Alumni", 800, normal, url("../../fonts/alumni-sans/alumni-sans-800.woff2") format("woff2"), url("../../fonts/alumni-sans/alumni-sans-800.woff") format("woff"));
+@include font-face("Roboto", 300, normal, url("../../fonts/roboto-condensed/roboto-condensed-300.woff2") format("woff2"), url("../../fonts/roboto-condensed/roboto-condensed-300.woff") format("woff"));
+@include font-face("Roboto", 400, normal, url("../../fonts/roboto-condensed/roboto-condensed-400.woff2") format("woff2"), url("../../fonts/roboto-condensed/roboto-condensed-400.woff") format("woff"));
+@include font-face("Roboto", 700, normal, url("../../fonts/roboto-condensed/roboto-condensed-700.woff2") format("woff2"), url("../../fonts/roboto-condensed/roboto-condensed-700.woff") format("woff"));
