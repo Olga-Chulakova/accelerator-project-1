@@ -29,6 +29,34 @@
     font-size: $font-size-24;
     line-height: 24px;
   }
+
+  &:hover {
+    color: rgba(28, 51, 116, 0.5);
+  }
+
+  &:focus,
+  &:focus-visible {
+    color: #1c3374;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-basis;
+    text-decoration: underline;
+  }
+
+  &[disabled] {
+    color: #f8f9fc;
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &[disabled]:hover,
+  &[disabled]:focus,
+  &[disabled]:active {
+    color: #f8f9fc;
+    text-decoration: none;
+  }
 }
 
 .promo__big-wrapper {
@@ -153,6 +181,32 @@
   @media (min-width: $tablet) {
     grid-column: 2 / 3;
   }
+
+  &:hover,
+  &:active {
+    background-color: $color-additional;
+    border: none;
+  }
+
+  &:focus,
+  &:focus-visible {
+    border: 2px solid #000000;
+    background-color: rgba(255, 255, 255, 0.8);
+    outline: none;
+  }
+}
+
+.promo__link[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.promo__link[disabled]:hover,
+.promo__link[disabled]:active,
+.promo__link[disabled]:focus,
+.promo__link[disabled]:focus-visible {
+  background-color: transparent;
+  border: 2px solid $color-additional;
 }
 
 .promo__text-link {
@@ -165,6 +219,25 @@
   color: $color-additional;
   text-transform: uppercase;
   margin: 0;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.promo__link:hover .promo__text-link,
+.promo__link:focus .promo__text-link,
+.promo__link:focus-visible .promo__text-link {
+  color: $color-accent;
+}
+
+.promo__link:active .promo__text-link {
+  color: #102654;
+}
+
+.promo__link[disabled] .promo__text-link {
+  color: $color-additional;
+  opacity: 0.5;
 }
 
 .promo__hero-image {
