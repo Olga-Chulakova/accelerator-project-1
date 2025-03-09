@@ -10,7 +10,7 @@
 </head>
 
 <body class="page-body">
-  <section class="promo">
+  <section class="promo" data-test="hero">
     <div class="promo__wrapper container">
       <header class="main-header">
         <nav class="promo__nav">
@@ -49,6 +49,84 @@
             <img class="promo__hero-image" src="img/hero-tablet@1x.jpg" srcset="img/hero-tablet@2x.jpg 2x" width="324" height="390" alt="Спортивный мужчина">
           </picture>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="about" data-test="about">
+    <div class="about__general-wrapper">
+      <div class="about__text-wrapper container">
+        <h3 class="about__title">Тренажёрный зал</h3>
+        <h6 class="about__title-small">Просторный зал площадью 900 кв/м</h6>
+        <p class="about__text">Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.
+          <span class="about__addition-text">В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</span>
+        </p>
+      </div>
+      <div class="about__content-wrapper">
+        <div class="about__image-wrapper">
+          <picture>
+            <source media="(min-width: 1366px)" type="image/webp" width="660" height="400" srcset="img/image-about-desktop@1x.webp, img/image-about-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" type="image/webp" width="678" height="345" srcset="img/image-about-tablet@1x.webp, img/image-about-tablet@2x.webp 2x">
+            <source type="image/webp" width="320" height="280" srcset="img/image-about-mobile@1x.webp, img/image-about-mobile@2x.webp 2x">
+            <source media="(min-width: 1366px)" srcset="img/image-about-desktop@1x.jpg 1x, img/image-about-desktop@2x.jpg 2x" type="image/jpg" width="660" height="400">
+            <source media="(min-width: 768px)" srcset="img/image-about-tablet@1x.jpg 1x, img/image-about-tablet@2x.jpg 2x" type="image/jpg" width="678" height="345">
+            <img class="about__image" src="img/image-about-mobile@1x.jpg" srcset="img/image-about-mobile@2x.jpg 2x" width="320" height="280" alt="Тренажерный зал">
+          </picture>
+        </div>
+        <div class="about__video-wrapper video">
+          <picture>
+            <source media="(min-width: 1366px)" type="image/webp" width="360" height="230" srcset="img/video-img-desktop@1x.webp, img/video-img-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" type="image/webp" width="270" height="170" srcset="img/video-img-tablet@1x.webp, img/video-img-tablet@2x.webp 2x">
+            <source type="image/webp" width="320" height="170" srcset="img/video-img-mobile@1x.webp, img/video-img-mobile@2x.webp 2x">
+            <source media="(min-width: 1366px)" srcset="img/video-img-desktop@1x.jpg 1x, img/video-img-desktop@2x.jpg 2x" type="image/jpg" width="360" height="230">
+            <source media="(min-width: 768px)" srcset="img/video-img-tablet@1x.jpg 1x, img/video-img-tablet@2x.jpg 2x" type="image/jpg" width="270" height="170">
+            <img class="video__image" src="img/video-img-mobile@1x.jpg" srcset="img/video-img-mobile@2x.jpg 2x" width="320" height="170" alt="Видео">
+          </picture>
+          <button class="video__play-button" type="button" aria-label="Play video"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="price" data-test="price">
+    <div class="price__wrapper container">
+      <h3 class="price__title">Абонементы</h3>
+      <div class="tabs">
+        <ul class="tabs__list">
+          <li class="tabs__item active">
+            <button class="tabs__button tabs__button--active" type="button" data-tabs-path="1-month">1 месяц</button>
+          </li>
+          <li class="tabs__item ">
+            <button class="tabs__button" type="button" data-tabs-path="6-months">6 месяцев</button>
+          </li>
+          <li class="tabs__item ">
+            <button class="tabs__button" type="button" data-tabs-path="12-months">12 месяцев</button>
+          </li>
+        </ul>
+        <div class="tabs__content tabs__content--active" id="1-month">
+          <div class="content">
+            <ul class="content__list">
+              <li class="content__item">
+                <h4 class="content__title">C тренером</h4>
+                <p class="content__text">12 занятий</p>
+                <span class="content__price" data-price="5000" aria-hidden="true">5000</span>
+                <a class="content__link" href="#">Купить абонемент</a>
+              </li>
+              <li class="content__item">
+                <h4 class="content__title">Дневной</h4>
+                <p class="content__text">c 8:00 до 17:00</p>
+                <span class="content__price" data-price="1700" aria-hidden="true">1700</span>
+                <a class="content__link" href="#">Купить абонемент</a>
+              </li>
+              <li class="content__item">
+                <h4 class="content__title">Полный день</h4>
+                <p class="content__text">c 8:00 до 22:00</p>
+                <span class="content__price" data-price="2700" aria-hidden="true">2700</span>
+                <a class="content__link" href="#">Купить абонемент</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="tabs__content" id="6-months">Content for Tab 2</div>
+        <div class="tabs__content" id="12-months">Content for Tab 3</div>
       </div>
     </div>
   </section>

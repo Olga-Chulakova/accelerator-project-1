@@ -1,0 +1,135 @@
+.video__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  @media (min-width: $tablet) {
+    width: 270px;
+    height: 170px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 360px;
+    height: 230px;
+  }
+}
+
+.video__play-button {
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #ed0233, #003eb7);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+
+  &:hover,
+  &:active,
+  &:disabled {
+    background: $color-additional;
+  }
+
+  &:focus {
+    background: #c8c9cc;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 2px solid #ed0233;
+    opacity: 0.2;
+    outline: 10px solid transparent;
+    outline-offset: -10px;
+    pointer-events: none;
+    z-index: -1;
+    box-sizing: border-box;
+  }
+
+  &:hover::before {
+    opacity: 1;
+    border: 2px solid rgba(16, 38, 84, 0.6);
+  }
+
+  &:focus::before,
+  &:active::before {
+    opacity: 1;
+    border: 2px solid rgba(16, 38, 84, 1);
+  }
+
+  &:disabled::before {
+    opacity: 1;
+    border: 2px solid #9ba5b9;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 12px;
+    background-color: $color-additional;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+
+    /* Маска (треугольник) */
+    // mask-image: url("../../img/sprite/play.svg");
+    // mask-size: cover; /* Растягиваем маску */
+    // mask-repeat: no-repeat;
+    // mask-position: center;
+    // background-color: #ffffff; /* Изначальный цвет треугольника */
+    pointer-events: none; /* Чтобы не мешал кликам */
+  }
+
+  &:hover::after {
+    background-color: rgba(16, 38, 84, 0.6);
+  }
+
+  &:focus::after,
+  &:active::after {
+    background-color: rgba(16, 38, 84, 1);
+  }
+
+  &:disabled::after {
+    background-color: #9ba5b9;
+  }
+
+  @media (min-width: $desktop) {
+    width: 72px;
+    height: 72px;
+
+    &:active {
+      width: 58px;
+      height: 58px;
+    }
+
+    &::before {
+      content: "";
+      width: 100px;
+      height: 100px;
+    }
+
+    &::after {
+      content: "";
+      width: 13px;
+      height: 15px;
+    }
+  }
+}
