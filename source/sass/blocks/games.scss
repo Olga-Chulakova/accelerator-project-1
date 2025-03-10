@@ -1,0 +1,54 @@
+.games {
+  padding: 25px 0;
+}
+
+.games__wrapper-poster {
+  background-color: #ed0233;
+  padding: 40px;
+}
+
+.games__title {
+  font-family: $alumni;
+  font-size: $font-size-48;
+  line-height: 54px;
+  font-weight: 600;
+  color: $color-additional;
+  margin: 0;
+  width: 108px;
+}
+
+.games__date-label,
+.games__time-label {
+  font-family: $roboto;
+  font-size: $font-size-16;
+  line-height: 20px;
+  font-weight: 300;
+  color: $color-additional;
+  margin: 0;
+}
+
+.games__text {
+  font-family: $roboto;
+  font-size: $font-size-16;
+  line-height: 20px;
+  font-weight: 300;
+  color: $color-additional;
+  padding-right: 39px;
+  margin: 0 0 16px;
+}
+
+.games__link {
+  font-family: $roboto;
+  font-size: $font-size-12;
+  line-height: 12px;
+  font-weight: 700;
+  color: $color-additional;
+  margin: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 25px;
+  border: 2px solid $color-additional;
+  box-sizing: border-box;
+  text-align: center;
+  display: block;
+}

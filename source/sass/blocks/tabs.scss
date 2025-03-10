@@ -1,10 +1,13 @@
 .tabs__list {
-  padding: 0;
-  margin: 0;
+  padding: 0 0 10px;
+  margin: 0 0 30px;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+  box-sizing: border-box;
+  height: 26px;
 }
 
 .tabs__button {
@@ -14,6 +17,13 @@
   font-size: $font-size-16;
   line-height: 16px;
   font-weight: 400;
+  color: rgba(16, 38, 84, 0.5);
+  box-sizing: border-box;
+}
+
+.tabs__button--active {
   color: $color-basis;
-  padding: 0;
+  border-bottom: 2px solid #d10a42;
+  box-sizing: border-box;
+  padding-bottom: 7px;
 }

@@ -16,7 +16,6 @@
   gap: 18px;
   padding: 50px 42px;
   box-sizing: border-box;
-  align-items: center;
 }
 
 .content__title {
@@ -26,6 +25,7 @@
   font-weight: 700;
   color: $color-basis;
   margin: 0;
+  text-align: center;
 }
 
 .content__text {
@@ -35,11 +35,13 @@
   font-weight: 300;
   color: $color-basis;
   margin: 0;
+  text-align: center;
 }
 
 .content__price {
   font-family: $roboto;
   font-size: $font-size-48;
+  line-height: 72px;
   font-weight: 700;
   color: $color-accent;
   margin: 0;
@@ -47,32 +49,33 @@
   position: relative;
   padding-top: 48px;
   z-index: 1;
+  padding-left: 37px;
 
   &::before {
     content: attr(data-price);
+    font-family: "Roboto", sans-serif;
+    font-size: 80px;
+    line-height: 120px;
     color: #f2f2f2;
     vertical-align: top;
     z-index: -1;
     height: 100%;
-    font-family: "Roboto", sans-serif;
-    font-size: 80px;
-    line-height: 120px;
     position: absolute;
-    top: -7px;
-    left: -20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &::after {
-    content: "₽"; /*  Юникод символа рубля */
-    position: absolute; /*  Позиционируем символ абсолютно */
-    top: 0;
-    right: 0; /*  Размещаем справа от цены */
-    width: 12px;     /*  Задаем ширину символа */
-    height: 12px;    /*  Задаем высоту символа */
-    color: green;    /*  Задаем цвет символа */
-    font-size: 12px; /* Важно! Задаем размер шрифта, чтобы width и height работали правильно */
-    text-align: center; /* Центрируем символ по горизонтали */
-    line-height: 12px;
+    content: "";
+    position: absolute;
+    background-image: url("../../img/sprite/ruble.svg");
+    top: 67px;
+    margin-left: 10px;
+    z-index: 2;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 33px;
   }
 }
 
