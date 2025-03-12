@@ -1,10 +1,52 @@
 .games {
   padding: 25px 0;
+
+  @media (min-width: $tablet) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 100px 0;
+  }
+}
+
+.games__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+  }
 }
 
 .games__wrapper-poster {
   background-color: #ed0233;
   padding: 40px;
+
+  @media (min-width: $tablet) {
+    width: 300px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop) {
+    width: 500px;
+    padding: 60px 80px 98px;
+  }
+}
+
+.games__wrapper-text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 37px;
+
+  @media (min-width: $tablet) {
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 77px;
+  }
 }
 
 .games__title {
@@ -14,7 +56,43 @@
   font-weight: 600;
   color: $color-additional;
   margin: 0;
-  width: 108px;
+  width: 117px;
+
+  @media (min-width: $tablet) {
+    width: 100px;
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: $font-size-82;
+    line-height: 96px;
+    width: 168px;
+    margin-bottom: 0;
+  }
+}
+
+.games__wrapper-date {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 5px;
+
+  @media (min-width: $tablet) {
+    gap: 10px;
+  }
+}
+
+.games__date-time {
+  width: 56px;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    width: 100px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 95px;
+  }
 }
 
 .games__date-label,
@@ -24,7 +102,80 @@
   line-height: 20px;
   font-weight: 300;
   color: $color-additional;
+  padding-bottom: 2px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid $color-additional;
+    width: 56px;
+    top: 22px;
+    left: 0;
+
+    @media (min-width: $tablet) {
+      width: 100px;
+      top: 26px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 95px;
+      top: 30px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    font-size: $font-size-18;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 6px;
+  }
+}
+
+.games__date-number,
+.games__time {
+  font-family: $roboto;
+  font-size: $font-size-24;
+  line-height: 24px;
+  font-weight: 700;
+  color: $color-additional;
   margin: 0;
+
+  @media (min-width: $desktop) {
+    font-size: $font-size-40;
+    line-height: 40px;
+  }
+}
+
+.games__date {
+  font-family: $roboto;
+  font-size: $font-size-12;
+  line-height: 12px;
+  font-weight: 400;
+  color: $color-additional;
+  margin: 0;
+  padding-top: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+
+  @media (min-width: $tablet) {
+    font-size: $font-size-14;
+    line-height: 22px;
+    gap: 5px;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop) {
+    width: 95px;
+  }
+}
+
+
+.games__time {
+  padding-top: 2px;
 }
 
 .games__text {
@@ -34,7 +185,19 @@
   font-weight: 300;
   color: $color-additional;
   padding-right: 39px;
-  margin: 0 0 16px;
+  margin: 16px 0;
+
+  @media (min-width: $tablet) {
+    font-size: $font-size-18;
+    line-height: 24px;
+    margin: 10px 0;
+    padding-right: 28px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 0;
+    margin: 30px 0;
+  }
 }
 
 .games__link {
@@ -46,9 +209,20 @@
   margin: 0;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 25px;
+  padding: 22px;
   border: 2px solid $color-additional;
   box-sizing: border-box;
   text-align: center;
   display: block;
+
+  @media (min-width: $tablet) {
+    padding: 25px;
+    box-sizing: border-box;
+    height: 66px;
+  }
+}
+
+.games__image {
+  display: block;
+  background-color: $color-basis;
 }

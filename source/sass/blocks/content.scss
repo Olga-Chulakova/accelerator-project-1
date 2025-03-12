@@ -6,6 +6,14 @@
   flex-wrap: wrap;
   flex-direction: column;
   gap: 35px;
+
+  @media (min-width: $tablet) {
+    gap: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+  }
 }
 
 .content__item {
@@ -16,6 +24,18 @@
   gap: 18px;
   padding: 50px 42px;
   box-sizing: border-box;
+
+  @media (min-width: $tablet) {
+    width: 380px;
+    margin: 0 auto;
+    padding: 65px;
+    gap: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 360px;
+    gap: 17px;
+  }
 }
 
 .content__title {
@@ -26,6 +46,16 @@
   color: $color-basis;
   margin: 0;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    font-size: $font-size-24;
+    line-height: 24px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: $font-size-26;
+    line-height: 26px;
+  }
 }
 
 .content__text {
@@ -36,6 +66,11 @@
   color: $color-basis;
   margin: 0;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    font-size: $font-size-16;
+    line-height: 24px;
+  }
 }
 
 .content__price {
@@ -56,7 +91,7 @@
     font-family: "Roboto", sans-serif;
     font-size: 80px;
     line-height: 120px;
-    color: #f2f2f2;
+    color: #e8e8e8;
     vertical-align: top;
     z-index: -1;
     height: 100%;
@@ -77,6 +112,31 @@
     width: 24px;
     height: 33px;
   }
+
+  @media (min-width: $tablet) {
+    padding-top: 60px;
+    padding-left: 42px;
+    font-size: $font-size-60;
+    line-height: 90px;
+
+    &::before {
+      content: attr(data-price);
+      font-size: 100px;
+      line-height: 150px;
+    }
+
+    &::after {
+      background-size: 30px 42px;
+      top: 84px;
+      margin-left: 14px;
+      width: 30px;
+      height: 42px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 32px;
+  }
 }
 
 .content__link {
@@ -91,6 +151,10 @@
   padding: 25px;
   border: 2px solid $color-basis;
   box-sizing: border-box;
-  width: 206px;
+  width: auto;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    padding: 27px;
+  }
 }

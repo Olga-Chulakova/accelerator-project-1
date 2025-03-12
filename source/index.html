@@ -28,7 +28,7 @@
           <h1 class="promo__title">Фитнес центр</h1>
           <ul class="promo__list">
             <li class="promo__item">
-              <p class="promo__text">Тренажёрный зал</p>
+              <p class="promo__text">Тренажёрный зал</p>
             </li>
             <li class="promo__item">
               <p class="promo__text">Групповые занятия</p>
@@ -55,10 +55,10 @@
   <section class="about" data-test="about">
     <div class="about__general-wrapper">
       <div class="about__text-wrapper container">
-        <h3 class="about__title">Тренажёрный зал</h3>
-        <h6 class="about__title-small">Просторный зал площадью 900 кв/м</h6>
-        <p class="about__text">Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.
-          <span class="about__addition-text">В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</span>
+        <h3 class="about__title">Тренажёрный зал</h3>
+        <h6 class="about__title-small">Просторный зал площадью 900 кв/м</h6>
+        <p class="about__text">Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.
+          <span class="about__addition-text">В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</span>
         </p>
       </div>
       <div class="about__content-wrapper">
@@ -184,7 +184,9 @@
           <div class="games__wrapper-date">
             <dl class="games__date-time">
               <dt class="games__date-label">Дата</dt>
-              <dd class="games__date">span.games__dat 7 Марта 2019</dd>
+              <dd class="games__date"><span class="games__date-number">7</span>Марта <br>2019</dd>
+            </dl>
+            <dl class="games__date-time">
               <dt class="games__time-label">Время</dt>
               <dd class="games__time">12:00</dd>
             </dl>
@@ -193,7 +195,16 @@
         <p class="games__text">Ежегодные соревнования по CrossFit</p>
         <a class="games__link" href="#">заполнить заявку</a>
       </div>
-
+      <div class="games__picture-wrapper">
+        <picture>
+          <source media="(min-width: 1366px)" type="image/webp" width="660" height="500" srcset="img/games-foto-desktop@1x.webp, img/games-foto-desktop@2x.webp 2x">
+          <source media="(min-width: 768px)" type="image/webp" width="378" height="348" srcset="img/games-foto-tablet@1x.webp, img/games-foto-tablet@2x.webp 2x">
+          <source type="image/webp" width="290" height="290" srcset="img/games-foto-mobile@1x.webp, img/games-foto-mobile@2x.webp 2x">
+          <source media="(min-width: 1366px)" srcset="img/games-foto-desktop@1x.jpg 1x, img/games-foto-desktop@2x.jpg  2x" type="image/jpg" width="660" height="500">
+          <source media="(min-width: 768px)" srcset="img/games-foto-tablet@1x.jpg 1x, img/games-foto-tablet@2x.jpg 2x" type="image/jpg" width="378" height="348">
+          <img class="games__image" src="img/games-foto-mobile@1x.jpg" srcset="img/games-foto-desktop@2x.jpg 2x" width="290" height="290" alt="Спортсмен в тальке">
+        </picture>
+      </div>
     </div>
     </div>
   </section>
