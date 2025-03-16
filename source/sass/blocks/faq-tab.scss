@@ -1,0 +1,50 @@
+.faq-tab__list {
+  list-style-type: none;
+  margin: 0 0 35px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  @media (min-width: $tablet) {
+    margin: 0 0 45px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    flex-direction: column;
+  }
+}
+
+.faq-tab__button {
+  font-family: $roboto;
+  font-size: $font-size-16;
+  line-height: 16px;
+  font-weight: 400;
+  color: $color-basis;
+  text-align: center;
+  width: 140px;
+  height: 46px;
+  box-sizing: border-box;
+  padding: 14px;
+  border: 1px solid rgba(16, 38, 84, 0.2);
+  background-color: transparent;
+
+  @media (min-width: $tablet) {
+    width: 162px;
+    height: 54px;
+    padding: 18px;
+    font-size: $font-size-18;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 260px;
+  }
+}
+
+.faq-tab__button--active {
+  color: $color-additional;
+  background: linear-gradient(121deg, #ed0233 0%, #762075 50%, #003eb7 100%);
+  border: none;
+}

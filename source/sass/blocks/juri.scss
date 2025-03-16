@@ -26,18 +26,137 @@
   }
 }
 
-// .juri__card-wrapper {
-//   width: 260px;
-//   margin: 0 auto;
+.juri__card-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
 
-//   // @media (min-width: $tablet) {
-//   //   width: 678px;
-//   // }
+  @media (min-width: $tablet) {
+    padding: 0 6px;
+  }
 
-//   // @media (min-width: $desktop) {
-//   //   width: 1160px;
-//   // }
-// }
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
+}
+
+.juri__slider-button {
+  /* Базовые стили */
+  position: relative; /* Для позиционирования */
+  width: 50px; /* Размеры кнопки */
+  height: 50px;
+  border: transparent; /* Убираем стандартную рамку */
+  cursor: pointer;
+  padding: 0;
+  border-radius: 50%; /* Делаем кнопку круглой */
+  z-index: 10; /* Чтобы кнопка была выше обводки */
+  box-sizing: border-box; /* Чтобы border не влиял на размеры */ /* Прозрачный фон */
+  background-color: transparent;
+  display: none;
+  align-self: center;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрируем иконку */
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute; /* Абсолютное позиционирование */
+  }
+
+  /* Стили для SVG-иконки (псевдоэлемент ::before) */
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 32px;
+    mask-image: url("../../img/sprite/arrow-slider-juri.svg");
+    background-color: $color-basis;
+    mask-size: 16px 32px; /* Размеры SVG-иконки */
+    mask-repeat: no-repeat;
+    mask-position: center;
+    top: 50%; /* Центрируем по вертикали */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translate(-50%, -50%); /* Сдвигаем на половину ширины и высоты */
+    transition: background-color 0.2s ease-in-out; /* Плавное изменение цвета */
+    z-index: 1; /* Чтобы иконка была выше обводки */
+  }
+
+  /* Стили для обводки (псевдоэлемент ::after) */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Размеры обводки */
+    height: 100%;
+    border-radius: 50%; /* Делаем обводку круглой */
+    border: 1px solid transparent; /* Прозрачная обводка по умолчанию */
+    box-sizing: border-box; /* Чтобы border не влиял на размеры */
+    z-index: 0; /* Под иконкой */
+    pointer-events: none; /* Чтобы не перекрывала кнопку */
+    transition: border-color 0.2s ease-in-out; /* Плавное появление */
+  }
+
+  &:not(:disabled):hover::after,
+  &:not(:disabled):focus::after,
+  &:not(:disabled):focus-visible::after,
+  &:not(:disabled):active::after {
+    border-color: $color-basis; /* Показываем обводку */
+  }
+
+  &:not(:disabled):active {
+    background-color: $color-basis;
+  }
+
+  &:not(:disabled):active::before {
+    background-color: $color-additional;
+  }
+
+  &:not(:disabled):focus,
+  &:not(:disabled):focus-visible {
+    outline: none;
+    background-color: #e8e8e8;
+  }
+
+
+  /* Стили для отключенной кнопки */
+  &:disabled {
+    cursor: not-allowed; /* Меняем курсор */
+  }
+
+  &:disabled:focus-visible {
+    outline: none; /* Убираем обводку фокуса */
+  }
+
+  &:disabled::before {
+    background-color: rgba(16, 38, 84, 0.3); /* Цвет SVG-иконки */
+  }
+
+  &:disabled::after {
+    border-color: transparent; /* Убираем обводку */
+  }
+}
+
+
+.juri__slider-button--prev {
+  @media (min-width: $desktop) {
+    left: -52px;
+  }
+}
+
+.juri__slider-button--next {
+  transform: rotate(180deg);
+
+  @media (min-width: $desktop) {
+    right: -52px;
+  }
+}
 
 .juri__list {
   padding: 0;
@@ -63,6 +182,17 @@
   justify-content: center;
 }
 
+.juri__item:focus .info,
+.juri__item:focus-visible .info {
+  display: block;
+}
+
+.juri__item:hover .info {
+  @media (min-width: $desktop) {
+    display: block;
+  }
+}
+
 .juri__image {
   display: block;
 }
@@ -83,3 +213,15 @@
   // width: 90%;
   // text-align: center;
 }
+
+.juri__item:focus .juri__name,
+.juri__item:focus-visible .juri__name {
+  display: none;
+}
+
+.juri__item:hover .juri__name {
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
