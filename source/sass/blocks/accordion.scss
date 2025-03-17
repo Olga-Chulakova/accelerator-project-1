@@ -1,0 +1,95 @@
+.accordion__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.accordion__item {
+  padding: 20px 0;
+  border-top: 1px solid #74819c;
+
+  &:last-child {
+    border-bottom: 1px solid #74819c;
+  }
+}
+
+.accordion__header {
+  font-family: $roboto;
+  font-size: $font-size-20;
+  line-height: 20px;
+  font-weight: 400;
+  color: $color-basis;
+  width: 238px;
+  list-style-type: none;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #1c3374;
+    box-sizing: border-box;
+    top: 50%;
+    left: 260px; /*  Выравниваем круг по правому краю  */
+    transform: translateY(-50%);
+    display: block;
+  }
+
+  &::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    display: block;
+    mask-image: url("../../img/sprite/plus.svg"); /* Путь к SVG-иконке плюса */
+    mask-repeat: no-repeat; /* Запрещаем повторение изображения */
+    mask-position: center; /* Центрируем изображение */
+    mask-size: 14px 14px; /* Задаем размеры SVG-иконки */
+    background-color: #1c3374;
+    position: absolute;
+    top: 50%; /*  Центрируем по вертикали  */
+    left: 275px; /*  Сдвигаем влево относительно круга чтобы отцентрировать внутри */
+    transform: translate(-50%, -50%); /* Изначальный масштаб по горизонтали */
+    will-change: transform;
+  }
+}
+
+.accordion__content[open] > summary::after {
+  background-color: #1c3374;
+  border: none;
+}
+
+.accordion__content[open] > summary::before {
+  content: "";
+  width: 14px;
+  height: 1px;
+  background-color: #ffffff;
+  mask-image: none;
+  z-index: 1;
+}
+
+// .accordion__content[open] > summary::before {
+//   width: 14px;
+//   height: 2px;
+//   mask-image: url("../../img/sprite/minus.svg");
+//   mask-repeat: no-repeat;
+//   mask-position: center;
+//   mask-size: 14px 2px;
+//   background-color: #ffffff;
+//   z-index: 10;
+// }
+
+.accordion__body {
+  font-family: $roboto;
+  font-size: $font-size-16;
+  line-height: 20px;
+  font-weight: 300;
+  color: $color-basis;
+  margin-top: 20px;
+  width: 238px;
+}
