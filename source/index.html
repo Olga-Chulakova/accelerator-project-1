@@ -389,7 +389,7 @@
       <h3 class="faq__title">Вопросы и ответы</h3>
       <div class="faq__tabs-wrapper faq-tab">
         <ul class="faq-tab__list">
-          <li class="faq-tab__item faq-tab__item--active" data-tab="tab1">
+          <li class="faq-tab__item" data-tab="tab1">
             <button class="faq-tab__button faq-tab__button--active" type="button">Центр</button>
           </li>
           <li class="faq-tab__item" data-tab="tab2">
@@ -403,44 +403,128 @@
           </li>
         </ul>
 
-        <div class="tab-content active" id="tab1">
-          <div class="accordion">
-            <div class="accordion-item">
-              <div class="accordion-header">Вопрос 1</div>
-              <div class="accordion-content">Ответ 1</div>
-            </div>
-          </div>
+        <div class="faq-tab__content faq-tab__content--active" id="tab1">
+          <ul class="faq-tab__accordion-list accordion">
+            <li class="accordion__item">
+              <details class="accordion__content" open>
+                <summary class="accordion__header">Как стать членом фитнес-центра?</summary>
+                <div class="accordion__body">При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.
+                </div>
+              </details>
+            </li>
+            <li class="accordion__item">
+              <details class="accordion__content">
+                <summary class="accordion__header">Где можно посмотреть расписание?</summary>
+                <div class="accordion__body">Актуальное расписание доступно на нашем сайте, в мобильном приложении, а также на ресепшене клуба.</div>
+              </details>
+            </li>
+            <li class="accordion__item">
+              <details class="accordion__content">
+                <summary class="accordion__header">Есть кулеры в центре? Предоставляются полотенца?</summary>
+                <div class="accordion__body">Да, в зале установлены кулеры с питьевой водой. Полотенца предоставляются бесплатно.</div>
+              </details>
+            </li>
+            <li class="accordion__item">
+              <details class="accordion__content">
+                <summary class="accordion__header">Сколько тренеров работает в клубе и какова их квалификация?</summary>
+                <div class="accordion__body">В нашем клубе работает более 10 квалифицированных тренеров с опытом работы и соответствующими сертификатами.</div>
+              </details>
+            </li>
+          </ul>
         </div>
 
-        <div class="tab-content" id="tab2">
-          <div class="accordion">
-            <div class="accordion-item">
-              <div class="accordion-header">Вопрос 3</div>
-              <div class="accordion-content">Ответ 3</div>
-            </div>
-          </div>
+        <div class="faq-tab__content" id="tab2">
+          <ul class="faq-tab__accordion-list accordion">
+            <li class="accordion__item">
+              <details class="accordion__content" open>
+                <summary class="accordion__header">Какие виды абонементов вы предлагаете?</summary>
+                <div class="accordion__body">1 месяц, 3 месяца, 6 месяцев и год. Каждый включает разные возможности для ваших целей.
+                </div>
+              </details>
+            </li>
+            <li class="accordion__item">
+              <details class="accordion__content">
+                <summary class="accordion__header">Что входит в стоимость абонемента?</summary>
+                <div class="accordion__body">Тренажерный зал, групповые занятия (опционально), раздевалки, душ и консультация тренера.</div>
+              </details>
+            </li>
+            <li class="accordion__item">
+              <details class="accordion__content">
+                <summary class="accordion__header">Могу ли я заморозить абонемент?</summary>
+                <div class="accordion__body">Да, возможность заморозки есть. Условия зависят от типа абонемента, уточняйте у менеджеров.</div>
+              </details>
+            </li>
+            <li class="accordion__item">
+              <details class="accordion__content">
+                <summary class="accordion__header">Как оплатить абонемент?</summary>
+                <div class="accordion__body">Наличными, картой в клубе или онлайн на сайте.</div>
+              </details>
+            </li>
+          </ul>
         </div>
 
-        <div class="tab-content" id="tab3">
-          <div class="accordion">
-            <div class="accordion-item">
-              <div class="accordion-header">Вопрос 4</div>
-              <div class="accordion-content">Ответ 4</div>
-            </div>
-          </div>
+        <div class="faq-tab__content" id="tab3">
+          <ul class="faq-tab__accordion-list accordion">
+            <li class="accordion__item">
+              <details class="accordion__content" open>
+                <summary class="accordion__header">Какие персональные тренировки у вас есть?</summary>
+                <div class="accordion__body">Индивидуальные занятия с тренером, мини-группы (2-3 человека) и онлайн-консультации.
+                </div>
+              </details>
+            </li>
+            <li class="accordion__item">
+              <details class="accordion__content">
+                <summary class="accordion__header">Есть ли у вас массажный кабинет?</summary>
+                <div class="accordion__body">Да, предлагаем различные виды массажа: спортивный, расслабляющий, антицеллюлитный.</div>
+              </details>
+            </li>
+            <li class="accordion__item">
+              <details class="accordion__content">
+                <summary class="accordion__header">Что входит в функциональную диагностику?</summary>
+                <div class="accordion__body">Оценка состава тела, уровня физической подготовки, консультация по питанию и тренировкам.</div>
+              </details>
+            </li>
+            <li class="accordion__item">
+              <details class="accordion__content">
+                <summary class="accordion__header">Проводятся ли у вас групповые занятия?</summary>
+                <div class="accordion__body">Да, есть йога, пилатес, зумба, силовые тренировки и многое другое. Расписание на сайте.</div>
+              </details>
+            </li>
+          </ul>
+        </div>
+        <div class="faq-tab__content" id="tab4">
+          <ul class="faq-tab__accordion-list accordion">
+            <li class="accordion__item">
+              <details class="accordion__content" open>
+                <summary class="accordion__header">Что нужно для первого посещения?</summary>
+                <div class="accordion__body">Паспорт, спортивная форма, полотенце и сменная обувь.</div>
+              </details>
+            </li>
+            <li class="accordion__item">
+              <details class="accordion__content">
+                <summary class="accordion__header">Можно ли посещать зал с детьми?</summary>
+                <div class="accordion__body">Детям до 16 лет посещение разрешено только в сопровождении взрослых или на детских занятиях.</div>
+              </details>
+            </li>
+            <li class="accordion__item">
+              <details class="accordion__content">
+                <summary class="accordion__header">Каковы правила пользования тренажерами?</summary>
+                <div class="accordion__body">Соблюдайте технику безопасности, используйте полотенце, возвращайте оборудование на место.</div>
+              </details>
+            </li>
+            <li class="accordion__item">
+              <details class="accordion__content">
+                <summary class="accordion__header">Где можно узнать о изменениях в расписании?</summary>
+                <div class="accordion__body">На сайте, в мобильном приложении и на информационных стендах в клубе.</div>
+              </details>
+            </li>
+          </ul>
         </div>
 
-        <div class="tab-content" id="tab4">
-          <div class="accordion">
-            <div class="accordion-item">
-              <div class="accordion-header">Вопрос 5</div>
-              <div class="accordion-content">Ответ 5</div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
+
   <script type="module" src="js/main.js"></script>
 </body>
 
