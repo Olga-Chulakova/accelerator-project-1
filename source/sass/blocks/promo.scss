@@ -36,6 +36,16 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border: 1px solid $color-basis;
+    bottom: -5px;
+    display: none;
+  }
 
   @media (min-width: $tablet) {
     font-size: $font-size-24;
@@ -52,9 +62,12 @@
     outline: none;
   }
 
+  &:active::after {
+    display: block;
+  }
+
   &:active {
     color: $color-basis;
-    text-decoration: underline;
   }
 
   &[disabled] {
@@ -67,7 +80,6 @@
   &[disabled]:focus,
   &[disabled]:active {
     color: #f8f9fc;
-    text-decoration: none;
   }
 }
 

@@ -29,11 +29,34 @@
   font-weight: 400;
   color: rgba(16, 38, 84, 0.5);
   box-sizing: border-box;
+  padding: 0 0 7px;
+
+  &:hover {
+    color: rgba(16, 38, 84, 0.7);
+    border-color: #787878;
+  }
+
+  &:focus,
+  &:focus-visible {
+    color: $color-basis;
+    border-color: $color-basis;
+    outline: none;
+  }
+
+  // &:active {
+  //   color: $color-basis;
+  //   border-color: #d10a42;
+  // }
+
+  &:disabled {
+    color: $color-basis;
+    border-color: $color-basis;
+    opacity: 30%;
+  }
 }
 
 .tabs__button--active {
   color: $color-basis;
   border-bottom: 2px solid #d10a42;
-  box-sizing: border-box;
   padding-bottom: 7px;
 }
