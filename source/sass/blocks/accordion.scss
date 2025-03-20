@@ -14,6 +14,10 @@
   &:last-child {
     border-bottom: 1px solid #74819c;
   }
+
+  @media (min-width: $tablet) {
+    padding: 23px 0;
+  }
 }
 
 .accordion__header {
@@ -34,6 +38,24 @@
   color: $color-basis;
   width: 238px;
   margin: 0;
+
+  @media (min-width: $tablet) {
+    width: 500px;
+    font-size: $font-size-22;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    width: auto;
+    font-size: $font-size-24;
+    line-height: 24px;
+  }
+}
+
+.accordion__title br {
+  @media (min-width: $desktop) {
+    display: none;
+  }
 }
 
 .accordion__indicator {
@@ -87,6 +109,16 @@
     background-color: $color-additional;
     z-index: 1;
   }
+
+  @media (min-width: $tablet) {
+    width: 40px;
+    height: 40px;
+
+    &::before,
+    &::after {
+      width: 20px;
+    }
+  }
 }
 
 .accordion__content[open] .accordion__indicator {
@@ -108,19 +140,27 @@
   color: $color-basis;
   margin-top: 20px;
   width: 238px;
-  height: auto;
-  transform-origin: top;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  backface-visibility: hidden;
-  transform: scaleY(0); /* Скрываем все элементы .accordion__body */
+
+  // height: auto;
+  // transform-origin: top;
+  // overflow: hidden;
+  // transition: transform 0.3s ease;
+  // backface-visibility: hidden;
+  // transform: scaleY(0);  /* Скрываем все элементы .accordion__body */
+
+  @media (min-width: $tablet) {
+    width: 559px;
+    font-size: $font-size-18;
+    line-height: 24px;
+    margin-top: 10px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 660px;
+    margin-top: 23px;
+  }
 }
 
-.accordion__item:first-child .accordion__content[open] .accordion__body {
-  transform: scaleY(1);  /*  Принудительно раскрываем первый элемент  */
-}
-
-.accordion__content[open] .accordion__body {
-  transform: scaleY(1);   /*  Раскрываем остальные элементы  */
-}
-
+// .accordion__content[open] .accordion__body {
+//   transform: scaleY(1);   /*  Раскрываем все элементы  */
+// }

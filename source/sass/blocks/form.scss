@@ -1,0 +1,6 @@
+.form__general-wrapper {
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

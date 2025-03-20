@@ -3,15 +3,27 @@
   background-size: cover; /* Или contain */
   background-position: center;
   padding-bottom: 32px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 99px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 119px;
+  }
 }
 
 .promo__nav {
-  padding: 16px 0;
+  padding: 16px 0 18px;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
+  margin-bottom: 48px;
 
   @media (min-width: $tablet) {
-    padding: 30px 0;
+    padding: 30px 0 31px;
+    margin-bottom: 0;
   }
 }
 
@@ -75,7 +87,7 @@
 .promo__container {
   display: grid;
   grid-template-columns: auto 156px;
-  grid-template-rows: auto auto 48px auto;
+  grid-template-rows: auto auto 46px auto;
 
   @media (min-width: $tablet) {
     grid-template-columns: 139px 185px;
@@ -124,11 +136,13 @@
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   text-align: right;
+  letter-spacing: 1px;
 
   @media (min-width: $tablet) {
     margin-top: 10px;
     font-size: $font-size-72;
     line-height: 85px;
+    letter-spacing: 2px;
   }
 
   @media (min-width: $desktop) {
@@ -168,8 +182,11 @@
 }
 
 .promo__link {
-  display: block;
-  padding: 22px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 10px;
   box-sizing: border-box;
   border: 2px solid $color-additional;
   cursor: pointer;
@@ -180,6 +197,7 @@
 
   @media (min-width: $tablet) {
     grid-column: 2 / 3;
+    height: 56px;
   }
 
   &:hover,

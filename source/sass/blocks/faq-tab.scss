@@ -48,3 +48,15 @@
   background: linear-gradient(121deg, #ed0233 0%, #762075 50%, #003eb7 100%);
   border: none;
 }
+
+.faq-tab__content {
+  display: none;
+
+  @media (min-width: $desktop) {
+    width: 860px;
+  }
+}
+
+.faq-tab__content--active {
+  display: block;
+}

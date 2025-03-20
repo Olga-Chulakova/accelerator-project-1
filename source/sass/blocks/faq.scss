@@ -3,7 +3,7 @@
   background-color: #f8f9fc;
 
   @media (min-width: $tablet) {
-    padding: 60px 0;
+    padding: 60px 0 61px;
   }
 
   @media (min-width: $desktop) {
@@ -31,5 +31,13 @@
     line-height: 54px;
     margin: 0 0 50px;
     text-align: left;
+  }
+}
+
+.faq__tabs-wrapper {
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
   }
 }
