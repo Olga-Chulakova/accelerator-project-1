@@ -209,16 +209,31 @@
   margin: 0;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 22px;
+  padding: 5px;
   border: 2px solid $color-additional;
   box-sizing: border-box;
   text-align: center;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
 
   @media (min-width: $tablet) {
-    padding: 25px;
-    box-sizing: border-box;
     height: 66px;
+  }
+
+  &:hover {
+    background-color: $color-additional;
+    color: #ed0233;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    background-color: $color-additional;
+    color: #103aae;
+    opacity: 70%;
+    border-color: #103aae;
   }
 }
 

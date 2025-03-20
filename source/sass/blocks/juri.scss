@@ -180,18 +180,24 @@
   position: relative;
   display: flex;
   justify-content: center;
-}
 
-.juri__item:focus .info,
-.juri__item:focus-visible .info {
-  display: block;
-}
+  &:hover .info {
+    @media (min-width: $desktop) {
+      display: block;
+    }
+  }
 
-.juri__item:hover .info {
-  @media (min-width: $desktop) {
+  &:focus .info,
+  &:focus-visible .info {
     display: block;
   }
 }
+
+// .juri__item:hover .info {
+//   @media (min-width: $desktop) {
+//     display: block;
+//   }
+// }
 
 .juri__image {
   display: block;
