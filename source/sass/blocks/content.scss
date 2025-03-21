@@ -184,15 +184,11 @@
   box-sizing: border-box;
   width: auto;
   text-align: center;
-  height: 66px;
+  min-height: 66px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10;
-
-  @media (min-width: $tablet) {
-    padding: 27px;
-  }
 
   &:hover,
   &:focus,

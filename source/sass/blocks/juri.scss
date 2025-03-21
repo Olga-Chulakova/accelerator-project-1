@@ -181,6 +181,10 @@
   display: flex;
   justify-content: center;
 
+  &:focus-visible {
+    outline: none;
+  }
+
   &:hover .info {
     @media (min-width: $desktop) {
       display: block;
