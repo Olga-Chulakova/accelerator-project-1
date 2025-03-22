@@ -75,9 +75,9 @@
     display: block;
     width: 16px;
     height: 32px;
-    mask-image: url("../../img/sprite/arrow-slider-juri.svg");
+    mask: url("/__spritemap#sprite-arrow-view");
     background-color: $color-basis;
-    mask-size: 16px 32px; /* Размеры SVG-иконки */
+    mask-size: cover; /* Размеры SVG-иконки */
     mask-repeat: no-repeat;
     mask-position: center;
     top: 50%; /* Центрируем по вертикали */
@@ -145,13 +145,15 @@
 
 
 .juri__slider-button--prev {
+  transform: rotate(-180deg);
+
   @media (min-width: $desktop) {
     left: -52px;
   }
 }
 
 .juri__slider-button--next {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 
   @media (min-width: $desktop) {
     right: -52px;

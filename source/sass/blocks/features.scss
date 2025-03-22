@@ -110,14 +110,6 @@
   }
 }
 
-.features__item--square br {
-  display: none;
-
-  @media (min-width: $tablet) {
-    display: block;
-  }
-}
-
 .features__item--parking {
   @media (min-width: $tablet) {
     grid-column: 2 / 3;
@@ -127,14 +119,6 @@
   @media (min-width: $desktop) {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
-  }
-}
-
-.features__item--parking br {
-  display: none;
-
-  @media (min-width: $desktop) {
-    display: block;
   }
 }
 
@@ -182,18 +166,6 @@
   @media (min-width: $desktop) {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
-  }
-}
-
-.features__item--coach br {
-  display: none;
-
-  @media (min-width: $tablet) {
-    display: block;
-  }
-
-  @media (min-width: $desktop) {
-    display: none;
   }
 }
 

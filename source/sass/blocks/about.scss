@@ -87,7 +87,7 @@
     text-align: center;
     font-size: $font-size-16;
     line-height: 24px;
-    width: 502px;
+    width: 500px;
     margin: 0 auto 36px;
   }
 
@@ -153,7 +153,7 @@
 
 
   @media (min-width: $desktop) {
-    left: 0;
-    transform: translateX(-27%) translateY(50%);
+    left: 1px;
+    transform: translateX(-28%) translateY(50%);
   }
 }

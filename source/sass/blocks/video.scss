@@ -16,7 +16,7 @@
 }
 
 .video__play-button {
-  padding: 0;
+  /* 1. Основные стили (позиционирование, размеры, форма) */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -24,25 +24,15 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: linear-gradient(to right, #ed0233, #003eb7);
+  box-sizing: border-box;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.2s ease-in-out;
-  box-sizing: border-box;
   border: none;
   outline: none;
-
-  &:hover,
-  &:active,
-  &:disabled {
-    background: $color-additional;
-  }
-
-  &:focus {
-    background: #c8c9cc;
-  }
+  background: linear-gradient(to right, #ed0233, #003eb7);
+  transition: transform 0.2s ease-in-out;
 
   &::before {
     content: "";
@@ -60,6 +50,38 @@
     pointer-events: none;
     z-index: -1;
     box-sizing: border-box;
+    transition: opacity 0.2s ease, border-color 0.2s ease; /* Добавим transition для плавности */
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 11px;
+    background-color: $color-additional;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    pointer-events: none; /* Чтобы не мешал кликам */
+    // transition: background-color 0.2s ease; /* Добавим transition для плавности */
+  }
+
+
+  &:hover {
+    background: $color-additional;
+  }
+
+  &:focus {
+    background: #c8c9cc;
+  }
+
+  &:active {
+    background: $color-additional;
+  }
+
+  &:disabled {
+    background: $color-additional;
   }
 
   &:hover::before {
@@ -78,26 +100,6 @@
     border: 2px solid #9ba5b9;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10px;
-    height: 12px;
-    background-color: $color-additional;
-    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
-
-    /* Маска (треугольник) */
-    // mask-image: url("../../img/sprite/play.svg");
-    // mask-size: cover; /* Растягиваем маску */
-    // mask-repeat: no-repeat;
-    // mask-position: center;
-    // background-color: #ffffff; /* Изначальный цвет треугольника */
-    pointer-events: none; /* Чтобы не мешал кликам */
-  }
-
   &:hover::after {
     background-color: rgba(16, 38, 84, 0.6);
   }
@@ -111,6 +113,14 @@
     background-color: #9ba5b9;
   }
 
+  @media (min-width: $tablet) {
+    &::after {
+      width: 9px;
+      height: 12px;
+      left: 52%;
+    }
+  }
+
   @media (min-width: $desktop) {
     width: 72px;
     height: 72px;
@@ -121,15 +131,15 @@
     }
 
     &::before {
-      content: "";
       width: 100px;
       height: 100px;
     }
 
     &::after {
-      content: "";
       width: 13px;
       height: 15px;
+      left: 53%;
     }
   }
 }
+

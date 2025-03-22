@@ -41,11 +41,24 @@
   @media (min-width: $desktop) {
     width: 260px;
   }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    border-color: $color-basis;
+    outline: none;
+  }
+
+  &:disabled {
+    color: #c8c9cc;
+    background: transparent;
+    border: 1px solid rgba(16, 38, 84, 0.2);
+  }
 }
 
 .faq-tab__button--active {
   color: $color-additional;
-  background: linear-gradient(121deg, #ed0233 0%, #762075 50%, #003eb7 100%);
+  background: linear-gradient(115deg, rgba(237, 2, 51, 1) 17%, rgba(118, 32, 117, 1) 54%, rgba(0, 62, 183, 1) 100%);
   border: none;
 }
 

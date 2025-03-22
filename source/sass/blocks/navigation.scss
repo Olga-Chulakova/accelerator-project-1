@@ -36,19 +36,26 @@
     pointer-events: none;
   }
 
+  &::before {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid $color-additional;
+    top: 27px;
+    width: 100%;
+    display: none;
+  }
+
   @media (min-width: $tablet) {
     line-height: 22px;
   }
 
-  &:hover:not(:focus),
-  &:hover:not(:focus-visible) {
-    &::before {
-      content: "";
-      position: absolute;
-      border-bottom: 1px solid $color-additional;
-      top: 27px;
-      width: 100%;
-    }
+  &:hover::before {
+    display: block;
+  }
+
+  &:hover:focus::after,
+  &:hover:focus-visible::after {
+    display: none;
   }
 
   &:focus,
@@ -59,5 +66,9 @@
   &:focus::after,
   &:focus-visible::after {
     border-color: $color-additional;
+  }
+
+  &:active:hover::before {
+    display: none;
   }
 }
