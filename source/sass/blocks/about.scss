@@ -128,6 +128,8 @@
 }
 
 .about__content-wrapper {
+  position: relative;
+
   @media (min-width: $tablet) {
     width: 678px;
     margin: 0 auto;
@@ -141,18 +143,24 @@
 
 .about__video-wrapper {
   position: relative;
-
-  //   @media (min-width: $tablet) {
-  //     position: absolute;
-  //     left: 50%;
-  //     bottom: 0;
-  //     transform: translateX(-50%) translateY(50%);
-  //     z-index: 10;
-  //   }
+  width: 100%;
+  height: auto;
 
 
-  //   @media (min-width: $desktop) {
-  //     left: 1px;
-  //     transform: translateX(-28%) translateY(50%);
-  //   }
+  @media (min-width: $tablet) {
+    position: absolute;
+    width: 270px;
+    height: 170px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) translateY(50%);
+  }
+
+
+  @media (min-width: $desktop) {
+    width: 360px;
+    height: 230px;
+    left: 1px;
+    transform: translateX(-28%) translateY(50%);
+  }
 }
