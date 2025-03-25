@@ -1,16 +1,16 @@
 .contacts__wrapper {
   width: 290px;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 37px 0 39px;
 
   @media (min-width: $tablet) {
     width: 440px;
-    padding: 60px 0;
+    padding: 60px 0 58px;
   }
 
   @media (min-width: $desktop) {
     width: 477px;
-    padding: 60px 0 71px;
+    padding: 60px 0 69px;
     margin: 0 auto 0 103px;
   }
 }
@@ -21,7 +21,7 @@
   line-height: 32px;
   font-weight: 600;
   color: $color-basis;
-  margin: 0 0 42px;
+  margin: 0 0 38px;
   text-align: left;
 
   @media (min-width: $tablet) {
@@ -76,7 +76,7 @@
   gap: 12px;
 
   @media (min-width: $tablet) {
-    gap: 5px;
+    gap: 6px;
   }
 }
 

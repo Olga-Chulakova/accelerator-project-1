@@ -9,10 +9,12 @@
 
   @media (min-width: $tablet) {
     gap: 15px;
+    padding-top: 1px;
   }
 
   @media (min-width: $desktop) {
     gap: 10px;
+    padding-top: 0;
   }
 }
 

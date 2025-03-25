@@ -1,5 +1,5 @@
 .navigation__list {
-  padding: 0;
+  padding: 1px 0 0;
   margin: 0;
   list-style-type: none;
   display: flex;
@@ -8,11 +8,12 @@
   gap: 20px 35px;
 
   @media (min-width: $tablet) {
-    gap: 30px;
+    gap: 31px;
+    padding: 0;
   }
 
   @media (min-width: $desktop) {
-    gap: 82px;
+    gap: 83px;
   }
 }
 

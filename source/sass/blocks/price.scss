@@ -1,13 +1,55 @@
 .price {
   padding: 40px 0;
   background-color: #f9f8fc;
+  z-index: 0;
 
   @media (min-width: $tablet) {
-    padding: 60px 0;
+    padding: 60px 0 61px;
   }
 
   @media (min-width: $desktop) {
     padding: 100px 0;
+  }
+}
+
+.price__wrapper {
+  position: relative;
+  z-index: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image:
+      image-set(
+        url("../../img/disk-weights-abonements@1x.png") 1x,
+        url("../../img/disk-weights-abonements@2x.png") 2x
+      );
+    object-fit: contain;
+    display: none;
+  }
+
+  @media (min-width: $tablet) {
+    &::after {
+      background-size: 275px 328px;
+      object-fit: contain;
+      bottom: -49px;
+      z-index: -1;
+      left: 68%;
+      width: 275px;
+      height: 328px;
+      transform: rotate(150deg);
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &::after {
+      background-size: 321px 384px;
+      bottom: -93px;
+      left: 89%;
+      width: 321px;
+      height: 384px;
+    }
   }
 }
 

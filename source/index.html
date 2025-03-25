@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUPERGYM</title>
   <link rel="stylesheet" href="sass/style.scss">
-  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body class="page-body">
@@ -74,6 +73,7 @@
             </picture>
           </div>
           <div class="about__video-wrapper video">
+            <iframe class="video__iframe" src="#" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <picture>
               <source media="(min-width: 1366px)" type="image/webp" width="360" height="230" srcset="img/video-img-desktop@1x.webp, img/video-img-desktop@2x.webp 2x">
               <source media="(min-width: 768px)" type="image/webp" width="270" height="170" srcset="img/video-img-tablet@1x.webp, img/video-img-tablet@2x.webp 2x">
@@ -311,7 +311,7 @@
     <section class="features" data-test="features">
       <h3 class="features__title">Наши преимущества</h3>
       <div class="features__wrapper">
-        <ul class="features__list">
+        <ul class="features__list features__list--first-wrapper">
           <li class="features__item features__item--square">
             <p class="features__number">900<span class="features__number-text">кв/м</span></p>
             <div class="features__item-wrapper">
@@ -329,7 +329,7 @@
           <li class="features__item features__item--middle-card">
             <p class="features__number features__number--middle-card">100</p>
             <h6 class="features__subtitle features__subtitle--middle-card">Тренажёров</h6>
-            <p class="features__text-subtitle features__text-subtitle--middle-card">Современные тренажёры на все группы мышц</p>
+            <p class="features__text-subtitle features__text-subtitle--middle-card">Современные тренажёры на&nbsp;все&nbsp;группы мышц</p>
           </li>
           <li class="features__item features__item--comfort">
             <p class="features__number">350<span class="features__number-text">мест</span></p>
@@ -385,7 +385,7 @@
         </div>
       </div>
     </section>
-    <section class="faq">
+    <section class="faq" data-test="faq">
       <div class="faq__wrapper container">
         <h3 class="faq__title">Вопросы и ответы</h3>
         <div class="faq__tabs-wrapper faq-tab">
@@ -580,8 +580,8 @@
             <li class="reviews__item reviews__item--active">
               <div class="reviews__image-wrapper">
                 <picture>
-                  <source type="image/webp" width="68" height="68" srcset="img/reviews@1x.webp, img/reviews@2x.webp 2x">
-                  <img class="reviews__image" src="img/reviews@1x.jpg" srcset="img/reviews@2x.jpg 2x" width="68" height="68" alt="Клиент Анна Орлова">
+                  <source type="image/webp" width="2943" height="4096" srcset="img/reviews@1x.webp, img/reviews@2x.webp 2x">
+                  <img class="reviews__image" src="img/reviews@1x.jpg" srcset="img/reviews@2x.jpg 2x" width="2943" height="4096" alt="Клиент Анна Орлова">
                 </picture>
               </div>
               <div class="reviews__text-wrapper">
@@ -701,7 +701,7 @@
       </div>
     </div>
   </footer>
-  <script type="module" src="js/main.js"></script>
+  <script src="js/main.js" type="module"></script>
 </body>
 
 </html>

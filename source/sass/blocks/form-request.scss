@@ -3,7 +3,7 @@
   background-color: $color-basis;
 
   @media (min-width: $tablet) {
-    padding: 60px 0;
+    padding: 60px 0 59px;
   }
 }
 
@@ -43,12 +43,16 @@
 
 .form-request__filter {
   display: grid;
-  row-gap: 36px;
+  row-gap: 37px;
 
   @media (min-width: $tablet) {
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
   }
+}
+
+.form-request__form-group {
+  margin-top: -1px;
 }
 
 .form-request__input {
@@ -94,7 +98,7 @@
   line-height: 22px;
   font-weight: 300;
   color: $color-additional;
-  opacity: 70%;
+  opacity: 40%;
   padding: 0;
 }
 

@@ -1,9 +1,9 @@
 .features {
-  padding: 40px 0;
+  padding: 41px 0 39px;
   background-color: #f8f9fc;
 
   @media (min-width: $tablet) {
-    padding: 60px 0;
+    padding: 61px 0 59px;
   }
 
   @media (min-width: $desktop) {
@@ -32,6 +32,25 @@
   }
 }
 
+// .features__wrapper {
+//   @media (min-width: $tablet) {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-rows: auto auto auto;
+//     row-gap: 39px;
+//     column-gap: 30px;
+//     width: 678px;
+//     margin: 0 auto;
+//   }
+
+//   @media (min-width: $desktop) {
+//     grid-template-columns: 1fr 1fr 1fr;
+//     grid-template-rows: auto auto;
+//     row-gap: 80px;
+//     column-gap: 40px;
+//   }
+// }
+
 .features__list {
   padding: 0;
   margin: 0;
@@ -41,24 +60,62 @@
   flex-wrap: wrap;
   gap: 35px;
 
+  // @media (min-width: $tablet) {
+  //   width: 678px;
+  //   margin: 0 auto;
+  //   flex-direction: row;
+  //   gap: 0;
+  // }
+
   @media (min-width: $tablet) {
     width: 678px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
+    row-gap: 38px;
     column-gap: 30px;
-    row-gap: 40px;
   }
 
   @media (min-width: $desktop) {
     width: 1160px;
+
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
     column-gap: 40px;
     row-gap: 80px;
   }
 }
+
+// .features__list:nth-of-type(odd) {
+//   grid-column: 1 / 2;
+// }
+
+// .features__list:nth-of-type(even) {
+//   grid-column: 2 / 3;
+// }
+
+// .features__list--first-wrapper {
+//   @media (min-width: $tablet) {
+//     grid-row: 1 / 2;
+//   }
+
+//   @media (min-width: $desktop) {
+//     grid-column: 1 / 4;
+//     grid-row: 1 / 2;
+//   }
+// }
+
+// .features__list--second-wrapper {
+//   @media (min-width: $tablet) {
+//     grid-row: 3 / 4;
+//   }
+
+//   @media (min-width: $desktop) {
+//     grid-column: 1 / 4;
+//     grid-row: 2 / 3;
+//   }
+// }
 
 .features__item {
   width: 290px;
@@ -124,14 +181,15 @@
 
 .features__item--middle-card {
   background-color: #1c3374;
-  padding: 30px 75px 40px;
+  padding: 30px 75px 39px;
   width: 100%;
-  margin: 0;
+  margin: 4px auto 5px;
+  box-sizing: border-box;
 
   @media (min-width: $tablet) {
     width: 320px;
-    margin: 0 auto;
     padding: 35px;
+    margin: 0 auto;
     grid-column: 1 / 3;
     grid-row: 2 / 3;
   }
@@ -149,6 +207,7 @@
   @media (min-width: $tablet) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+    padding-top: 2px;
   }
 
   @media (min-width: $desktop) {
@@ -161,6 +220,7 @@
   @media (min-width: $tablet) {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+    padding-top: 2px;
   }
 
   @media (min-width: $desktop) {
@@ -176,7 +236,7 @@
   font-weight: 700;
   text-align: center;
   margin: 0 0 12px;
-  background-image: linear-gradient(-230deg, #d10a42 17%, #4e2d97 36%, #0041ca 46%);
+  background-image: linear-gradient(150deg, rgb(209, 10, 66) 25%, rgb(103, 38, 135) 34%, rgb(0, 65, 202) 42%);
   background-size: auto 100%;
   background-clip: text;
   color: transparent;
@@ -185,6 +245,7 @@
   flex-direction: column;
 
   @media (min-width: $tablet) {
+    background-image: linear-gradient(135deg, rgba(209, 10, 66, 1) 3%, rgba(103, 38, 135, 1) 17%, rgba(0, 65, 202, 1) 37%);
     font-size: $font-size-70;
     line-height: 70px;
     margin: 0;
@@ -193,7 +254,7 @@
 
 .features__number--middle-card {
   color: $color-additional;
-  margin: 0 0 5px;
+  margin: 0 0 6px;
 
   @media (min-width: $tablet) {
     margin: 0 0 25px;
@@ -216,6 +277,7 @@
   @media (min-width: $tablet) {
     line-height: 22px;
     align-self: flex-start;
+    padding-top: 1px;
   }
 }
 

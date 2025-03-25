@@ -1,6 +1,7 @@
 .offers {
   padding: 40px 0;
 
+
   @media (min-width: $tablet) {
     padding: 60px 0;
   }
@@ -59,7 +60,7 @@
 .offers__poster-text {
   background-color: #ed0233;
   width: 100%;
-  padding: 30px;
+  padding: 30px 30px 36px;
   box-sizing: border-box;
   text-align: center;
   display: flex;
@@ -149,7 +150,7 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -5px;
+    bottom: -6px;
     left: 0;
     width: 100%;
     height: 1px;
@@ -166,6 +167,30 @@
     height: calc(100% + 20px);
     border: 1px solid transparent;
     box-sizing: border-box;
+  }
+
+  @media (min-width: $tablet) {
+    padding-bottom: 5px;
+
+    &::after {
+      bottom: 0;
+    }
+
+    &::before {
+      height: calc(100% + 15px);
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 0;
+
+    &::after {
+      bottom: -6px;
+    }
+
+    &::before {
+      height: calc(100% + 20px);
+    }
   }
 
   &:hover,
@@ -250,7 +275,7 @@
 
 .offers__item {
   width: 290px;
-  padding: 20px;
+  padding: 20px 20px 25px;
   box-sizing: border-box;
   border: 7px solid;
   border-image: linear-gradient(160deg, #d10a42 0%, #692070 50%, #00359f 100%);
@@ -278,7 +303,7 @@
   line-height: 22px;
   font-weight: 700;
   color: #1c3374;
-  margin: 0 0 20px;
+  margin: 0 0 21px;
 
   @media (min-width: $tablet) {
     font-size: $font-size-26;
@@ -315,10 +340,24 @@
 }
 
 .offers__card-link {
+  margin-top: auto;
   color: #1c3374;
+  padding-bottom: 0;
+
 
   &::after {
     background-color: #74819c;
+    bottom: -5px;
+  }
+
+  &::before {
+    height: calc(100% + 19px);
+  }
+
+  @media (min-width: $tablet) {
+    &::after {
+      bottom: -6px;
+    }
   }
 
   &:hover::after {

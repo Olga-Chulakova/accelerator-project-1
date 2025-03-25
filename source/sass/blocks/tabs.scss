@@ -4,7 +4,7 @@
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 46px;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
   box-sizing: border-box;
   height: 26px;
@@ -12,11 +12,15 @@
   @media (min-width: $tablet) {
     width: 310px;
     margin: 0 auto 45px;
+    padding: 0 0 25px;
+    gap: 44px;
   }
 
   @media (min-width: $desktop) {
     width: 350px;
     margin: 0 auto 40px;
+    padding: 0 0 28px;
+    gap: 51px;
   }
 }
 
@@ -30,6 +34,18 @@
   color: rgba(16, 38, 84, 0.5);
   box-sizing: border-box;
   padding: 0 0 7px;
+
+  @media (min-width: $tablet) {
+    font-size: $font-size-18;
+    line-height: 18px;
+    padding-top: 2px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: $font-size-20;
+    line-height: 20px;
+    padding-top: 0;
+  }
 
   &:hover {
     color: rgba(16, 38, 84, 0.7);
@@ -59,4 +75,12 @@
   color: $color-basis;
   border-bottom: 2px solid #d10a42;
   padding-bottom: 7px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 6px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 8px;
+  }
 }

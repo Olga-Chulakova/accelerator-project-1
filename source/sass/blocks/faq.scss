@@ -3,11 +3,11 @@
   background-color: #f8f9fc;
 
   @media (min-width: $tablet) {
-    padding: 60px 0 61px;
+    padding: 60px 0;
   }
 
   @media (min-width: $desktop) {
-    padding: 100px 0;
+    padding: 100px 0 99px;
   }
 }
 
