@@ -25,6 +25,7 @@
   padding: 50px 42px;
   box-sizing: border-box;
   position: relative;
+  z-index: 0;
 
   @media (min-width: $tablet) {
     width: 380px;
@@ -119,7 +120,7 @@
 
   &::before {
     content: attr(data-price);
-    font-family: "Roboto", sans-serif;
+    font-family: $roboto;
     font-size: 80px;
     line-height: 120px;
     color: #e8e8e8;

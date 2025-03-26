@@ -23,7 +23,7 @@
       </header>
       <div class="promo__big-wrapper">
         <div class="promo__container">
-          <h3 class="promo__title-small">Омск</h3>
+          <p class="promo__name-city">Омск</p>
           <h1 class="promo__title">Фитнес центр</h1>
           <ul class="promo__list">
             <li class="promo__item">
@@ -55,8 +55,8 @@
     <section class="about" data-test="about">
       <div class="about__general-wrapper">
         <div class="about__text-wrapper container">
-          <h3 class="about__title">Тренажёрный зал</h3>
-          <h6 class="about__title-small">Просторный зал площадью 900 кв/м</h6>
+          <h2 class="about__title">Тренажёрный зал</h2>
+          <p class="about__text-subtitle">Просторный зал площадью 900 кв/м</p>
           <p class="about__text">Supergym – самый большой фитнес центр за&nbsp;Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для&nbsp;всех спортсменов.
             <span class="about__addition-text">В зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с 40 тренажёрами. Также в фитнес центре есть несколько оборудованных залов для&nbsp;различных видов групповых занятий.</span>
           </p>
@@ -73,7 +73,7 @@
             </picture>
           </div>
           <div class="about__video-wrapper video">
-            <iframe class="video__iframe" title="YouTube video player" allowfullscreen></iframe>
+            <iframe class="video__iframe" width="320" height="170" title="YouTube video player" allowfullscreen></iframe>
             <picture>
               <source media="(min-width: 1366px)" type="image/webp" width="360" height="230" srcset="img/video-img-desktop@1x.webp, img/video-img-desktop@2x.webp 2x">
               <source media="(min-width: 768px)" type="image/webp" width="270" height="170" srcset="img/video-img-tablet@1x.webp, img/video-img-tablet@2x.webp 2x">
@@ -89,36 +89,36 @@
     </section>
     <section class="price" id="abonements" data-test="price">
       <div class="price__wrapper container">
-        <h3 class="price__title">Абонементы</h3>
+        <h2 class="price__title">Абонементы</h2>
         <div class="tabs">
           <ul class="tabs__list">
             <li class="tabs__item active">
-              <button class="tabs__button tabs__button--active" type="button" data-tabs-path="1-month">1 месяц</button>
+              <button class="tabs__button tabs__button--active" type="button" data-tab="tab-1">1 месяц</button>
             </li>
             <li class="tabs__item ">
-              <button class="tabs__button" type="button" data-tabs-path="6-months">6 месяцев</button>
+              <button class="tabs__button" type="button" data-tab="tab-2">6 месяцев</button>
             </li>
             <li class="tabs__item ">
-              <button class="tabs__button" type="button" data-tabs-path="12-months">12 месяцев</button>
+              <button class="tabs__button" type="button" data-tab="tab-3">12 месяцев</button>
             </li>
           </ul>
-          <div class="tabs__content tabs__content--active" id="1-month">
+          <div class="tabs__content tabs__content--active" id="tab-1">
             <div class="content">
               <ul class="content__list">
                 <li class="content__item">
-                  <h4 class="content__title">C тренером</h4>
+                  <h3 class="content__title">C тренером</h3>
                   <p class="content__text">12 занятий</p>
                   <span class="content__price" data-price="5000" aria-hidden="true">5000</span>
                   <a class="content__link" href="#">Купить абонемент</a>
                 </li>
                 <li class="content__item">
-                  <h4 class="content__title">Дневной</h4>
+                  <h3 class="content__title">Дневной</h3>
                   <p class="content__text">c 8:00 до 17:00</p>
                   <span class="content__price" data-price="1700" aria-hidden="true">1700</span>
                   <a class="content__link" href="#">Купить абонемент</a>
                 </li>
                 <li class="content__item">
-                  <h4 class="content__title">Полный день</h4>
+                  <h3 class="content__title">Полный день</h3>
                   <p class="content__text">c 8:00 до 22:00</p>
                   <span class="content__price" data-price="2700" aria-hidden="true">2700</span>
                   <a class="content__link" href="#">Купить абонемент</a>
@@ -126,11 +126,11 @@
               </ul>
             </div>
           </div>
-          <div class="tabs__content visually-hidden" id="6-months">
+          <div class="tabs__content" id="tab-2">
             <div class="content">
               <ul class="content__list">
                 <li class="content__item">
-                  <h4 class="content__title">C тренером</h4>
+                  <h3 class="content__title">C тренером</h3>
                   <p class="content__text">12 занятий</p>
                   <span class="content__price" data-price="30000" aria-hidden="true">30000</span>
                   <a class="content__link" href="#">Купить абонемент</a>
@@ -142,7 +142,7 @@
                   <a class="content__link" href="#">Купить абонемент</a>
                 </li>
                 <li class="content__item">
-                  <h4 class="content__title">Полный день</h4>
+                  <h3 class="content__title">Полный день</h3>
                   <p class="content__text">c 8:00 до 22:00</p>
                   <span class="content__price" data-price="16200" aria-hidden="true">16200</span>
                   <a class="content__link" href="#">Купить абонемент</a>
@@ -150,23 +150,23 @@
               </ul>
             </div>
           </div>
-          <div class="tabs__content visually-hidden" id="12-months">
+          <div class="tabs__content" id="tab-3">
             <div class="content">
               <ul class="content__list">
                 <li class="content__item">
-                  <h4 class="content__title">C тренером</h4>
+                  <h3 class="content__title">C тренером</h3>
                   <p class="content__text">12 занятий</p>
                   <span class="content__price" data-price="60000" aria-hidden="true">60000</span>
                   <a class="content__link" href="#">Купить абонемент</a>
                 </li>
                 <li class="content__item">
-                  <h4 class="content__title">Дневной</h4>
+                  <h3 class="content__title">Дневной</h3>
                   <p class="content__text">c 8:00 до 17:00</p>
                   <span class="content__price" data-price="20400" aria-hidden="true">20400</span>
                   <a class="content__link" href="#">Купить абонемент</a>
                 </li>
                 <li class="content__item">
-                  <h4 class="content__title">Полный день</h4>
+                  <h3 class="content__title">Полный день</h3>
                   <p class="content__text">c 8:00 до 22:00</p>
                   <span class="content__price" data-price="32400" aria-hidden="true">32400</span>
                   <a class="content__link" href="#">Купить абонемент</a>
@@ -210,7 +210,7 @@
     </section>
     <section class="juri" data-test="juri">
       <div class="juri__wrapper container">
-        <h3 class="juri__title">Жюри</h3>
+        <h2 class="juri__title">Жюри</h2>
         <div class="juri__card-wrapper">
           <button class="juri__slider-button juri__slider-button--prev" type="button" aria-label="Назад"></button>
           <ul class="juri__list">
@@ -308,39 +308,39 @@
       </div>
     </section>
     <section class="features" data-test="features">
-      <h3 class="features__title">Наши преимущества</h3>
+      <h2 class="features__title">Наши преимущества</h2>
       <div class="features__wrapper">
         <ul class="features__list features__list--first-wrapper">
           <li class="features__item features__item--square">
             <p class="features__number">900<span class="features__number-text">кв/м</span></p>
             <div class="features__item-wrapper">
-              <h6 class="features__subtitle">Площадь</h6>
+              <h3 class="features__subtitle">Площадь</h3>
               <p class="features__text-subtitle">Занимайтесь без очередей и&nbsp;толкучки</p>
             </div>
           </li>
           <li class="features__item features__item--parking">
             <p class="features__number">70<span class="features__number-text">машин</span></p>
             <div class="features__item-wrapper">
-              <h6 class="features__subtitle">Собственная парковка</h6>
+              <h3 class="features__subtitle">Собственная парковка</h3>
               <p class="features__text-subtitle">Вы всегда найдёте место для&nbsp;своей машины на нашей парковке</p>
             </div>
           </li>
           <li class="features__item features__item--middle-card">
             <p class="features__number features__number--middle-card">100</p>
-            <h6 class="features__subtitle features__subtitle--middle-card">Тренажёров</h6>
+            <h3 class="features__subtitle features__subtitle--middle-card">Тренажёров</h3>
             <p class="features__text-subtitle features__text-subtitle--middle-card">Современные тренажёры на&nbsp;все&nbsp;группы мышц</p>
           </li>
           <li class="features__item features__item--comfort">
             <p class="features__number">350<span class="features__number-text">мест</span></p>
             <div class="features__item-wrapper">
-              <h6 class="features__subtitle">Комфорт</h6>
+              <h3 class="features__subtitle">Комфорт</h3>
               <p class="features__text-subtitle">Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
             </div>
           </li>
           <li class="features__item features__item--coach">
             <p class="features__number">5+<span class="features__number-text">лет</span></p>
             <div class="features__item-wrapper">
-              <h6 class="features__subtitle">Тренерский опыт</h6>
+              <h3 class="features__subtitle">Тренерский опыт</h3>
               <p class="features__text-subtitle">Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером</p>
             </div>
           </li>
@@ -348,12 +348,12 @@
       </div>
     </section>
     <section class="offers" data-test="offers">
-      <h3 class="offers__title">Акции</h3>
+      <h2 class="offers__title">Акции</h2>
       <div class="offers__wrapper">
         <div class="offers__poster-wrapper">
           <div class="offers__poster-text">
-            <h4 class="offers__subtitle">Год</h4>
-            <span class="offers__number">4999</span>
+            <p class="offers__time">Год</p>
+            <span class="offers__price">4999</span>
             <p class="offers__text">Безлимитный абонемент в&nbsp;тренажёрный зал</p>
             <a class="offers__link" href="#">подробнее</a>
           </div>
@@ -371,12 +371,12 @@
         <div class="offers__card-wrapper">
           <ul class="offers__list">
             <li class="offers__item">
-              <h4 class="offers__card-subtitle">Месяц бесплатно</h4>
+              <h3 class="offers__card-subtitle">Месяц бесплатно</h3>
               <p class="offers__card-text">Приведи друга, получи абонемент в&nbsp;подарок</p>
               <a class="offers__card-link offers__link" href="#">подробнее</a>
             </li>
             <li class="offers__item">
-              <h4 class="offers__card-subtitle">Скидка 20%</h4>
+              <h3 class="offers__card-subtitle">Скидка 20%</h3>
               <p class="offers__card-text">Корпоративный фитнес с командой</p>
               <a class="offers__card-link offers__link" href="#">подробнее</a>
             </li>
@@ -386,7 +386,7 @@
     </section>
     <section class="faq" data-test="faq">
       <div class="faq__wrapper container">
-        <h3 class="faq__title">Вопросы и ответы</h3>
+        <h2 class="faq__title">Вопросы и ответы</h2>
         <div class="faq__tabs-wrapper faq-tab">
           <ul class="faq-tab__list">
             <li class="faq-tab__item" data-tab="tab1">
@@ -407,7 +407,7 @@
               <li class="accordion__item">
                 <details class="accordion__content" open>
                   <summary class="accordion__header">
-                    <h5 class="accordion__title">Как стать членом фитнес&#8209;центра?</h5>
+                    <h3 class="accordion__question">Как стать членом фитнес&#8209;центра?</h3>
                     <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
                   </summary>
                   <div class="accordion__body">При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор. При&nbsp;покупке абонемента онлайн, анкета также заполняется онлайн и&nbsp;договор придёт вам на почту.
@@ -417,7 +417,7 @@
               <li class="accordion__item">
                 <details class="accordion__content">
                   <summary class="accordion__header">
-                    <h5 class="accordion__title">Где можно посмотреть расписание?</h5>
+                    <h3 class="accordion__question">Где можно посмотреть расписание?</h3>
                     <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
                   </summary>
                   <div class="accordion__body">Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.
@@ -427,7 +427,7 @@
               <li class="accordion__item">
                 <details class="accordion__content">
                   <summary class="accordion__header">
-                    <h5 class="accordion__title">Есть кулеры в центре? Предоставляются полотенца?</h5>
+                    <h3 class="accordion__question">Есть кулеры в центре? Предоставляются полотенца?</h3>
                     <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
                   </summary>
                   <div class="accordion__body">Да, в зале установлены кулеры с питьевой водой. Полотенца предоставляются бесплатно.</div>
@@ -436,7 +436,7 @@
               <li class="accordion__item">
                 <details class="accordion__content">
                   <summary class="accordion__header">
-                    <h5 class="accordion__title">Сколько тренеров работает в клубе и какова их&nbsp;квалификация?</h5>
+                    <h3 class="accordion__question">Сколько тренеров работает в клубе и какова их&nbsp;квалификация?</h3>
                     <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
                   </summary>
                   <div class="accordion__body">В нашем клубе работает более 10 квалифицированных тренеров с опытом работы и соответствующими сертификатами.</div>
@@ -449,7 +449,7 @@
               <li class="accordion__item">
                 <details class="accordion__content" open>
                   <summary class="accordion__header">
-                    <h5 class="accordion__title">Занятия с тренером входят в абонемент?</h5>
+                    <h3 class="accordion__question">Занятия с тренером входят в абонемент?</h3>
                     <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
                   </summary>
                   <div class="accordion__body">При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.
@@ -459,7 +459,7 @@
               <li class="accordion__item">
                 <details class="accordion__content">
                   <summary class="accordion__header">
-                    <h5 class="accordion__title">Можно ли заморозить абонемент?</h5>
+                    <h3 class="accordion__question">Можно ли заморозить абонемент?</h3>
                     <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
                   </summary>
                   <div class="accordion__body">а, возможность заморозки есть. Условия зависят от типа абонемента, уточняйте у менеджеров.</div>
@@ -468,7 +468,7 @@
               <li class="accordion__item">
                 <details class="accordion__content">
                   <summary class="accordion__header">
-                    <h5 class="accordion__title">Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h5>
+                    <h3 class="accordion__question">Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h3>
                     <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
                   </summary>
                   <div class="accordion__body">Лимита по посещениям тренажерного зала нет. Групповые занятия оплачиваются дополнительно.</div>
@@ -477,7 +477,7 @@
               <li class="accordion__item">
                 <details class="accordion__content">
                   <summary class="accordion__header">
-                    <h5 class="accordion__title">Что такое семейный доступ и доступ для друзей?</h5>
+                    <h3 class="accordion__question">Что такое семейный доступ и доступ для друзей?</h3>
                     <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
                   </summary>
                   <div class="accordion__body">Семейный доступ – это как абонемент "Всё включено" для всей вашей семьи под одной крышей, вместе к здоровому образу жизни! А доступ для друзей – отличный способ привести приятелей в зал и разделить с ними радость от тренировок, даже если вы живете в разных концах города!</div>
@@ -490,7 +490,7 @@
               <li class="accordion__item">
                 <details class="accordion__content" open>
                   <summary class="accordion__header">
-                    <h5 class="accordion__title">Предлагает ли клуб услуги по консультированию по вопросам питания?</h5>
+                    <h3 class="accordion__question">Предлагает ли клуб услуги по консультированию по вопросам питания?</h3>
                     <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
                   </summary>
                   <div class="accordion__body">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.
@@ -500,7 +500,7 @@
               <li class="accordion__item">
                 <details class="accordion__content">
                   <summary class="accordion__header">
-                    <h5 class="accordion__title">Проводятся ли в клубе какие-либо мероприятия или соревнования?</h5>
+                    <h3 class="accordion__question">Проводятся ли в клубе какие-либо мероприятия или соревнования?</h3>
                     <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
                   </summary>
                   <div class="accordion__body">Да, ежегодно у нас проводятся областные мероприятия по пауэрлифтингу</div>
@@ -509,7 +509,7 @@
               <li class="accordion__item">
                 <details class="accordion__content">
                   <summary class="accordion__header">
-                    <h5 class="accordion__title">Можно ли приобрести в центре спортивное питание?</h5>
+                    <h3 class="accordion__question">Можно ли приобрести в центре спортивное питание?</h3>
                     <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
                   </summary>
                   <div class="accordion__body">Конечно, у нас разнообразное спортивное питание многих фирм.</div>
@@ -518,7 +518,7 @@
               <li class="accordion__item">
                 <details class="accordion__content">
                   <summary class="accordion__header">
-                    <h5 class="accordion__title">Есть ли в центре детская комната?</h5>
+                    <h3 class="accordion__question">Есть ли в центре детская комната?</h3>
                     <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
                   </summary>
                   <div class="accordion__body">Да, у нас присутствует детская комната с множеством игровых развлечений.</div>
@@ -531,7 +531,7 @@
               <li class="accordion__item">
                 <details class="accordion__content" open>
                   <summary class="accordion__header">
-                    <h5 class="accordion__title">Есть в фитнес-центре дресс-код?</h5>
+                    <h3 class="accordion__question">Есть в фитнес-центре дресс-код?</h3>
                     <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
                   </summary>
                   <div class="accordion__body">Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).
@@ -541,7 +541,7 @@
               <li class="accordion__item">
                 <details class="accordion__content">
                   <summary class="accordion__header">
-                    <h5 class="accordion__title">Можно ли приводить с собой детей на тренировки?</h5>
+                    <h3 class="accordion__question">Можно ли приводить с собой детей на тренировки?</h3>
                     <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
                   </summary>
                   <div class="accordion__body">Детям до 16 лет посещение разрешено только в сопровождении взрослых или на детских занятиях.</div>
@@ -550,7 +550,7 @@
               <li class="accordion__item">
                 <details class="accordion__content">
                   <summary class="accordion__header">
-                    <h5 class="accordion__title">Какие дополнительные правила посещения центра?</h5>
+                    <h3 class="accordion__question">Какие дополнительные правила посещения центра?</h3>
                     <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
                   </summary>
                   <div class="accordion__body">Соблюдайте технику безопасности, используйте полотенце, возвращайте оборудование на место.</div>
@@ -559,7 +559,7 @@
               <li class="accordion__item">
                 <details class="accordion__content">
                   <summary class="accordion__header">
-                    <h5 class="accordion__title">Нужна ли медицинская справка для посещения залов и бассейна?</h5>
+                    <h3 class="accordion__question">Нужна ли медицинская справка для посещения залов и бассейна?</h3>
                     <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
                   </summary>
                   <div class="accordion__body">Допускаются клиенты только с медицинской справкой</div>
@@ -572,7 +572,7 @@
     </section>
     <section class="reviews" data-test="reviews">
       <div class="reviews__wrapper">
-        <h3 class="reviews__title">Отзывы</h3>
+        <h2 class="reviews__title">Отзывы</h2>
         <div class="reviews__card-wrapper">
           <button class="reviews__slider-button reviews__slider-button--prev" type="button" aria-label="Назад"></button>
           <ul class="reviews__list">
@@ -609,17 +609,15 @@
       <div class="form__general-wrapper">
         <div class="form__wrapper form-request">
           <div class="form-request__wrapper">
-            <h3 class="form-request__title">Бесплатное занятие</h3>
+            <h2 class="form-request__title">Бесплатное занятие</h2>
             <form class="form-request__filter" action="https://echo.htmlacademy.ru/" method="post">
               <div class="form-request__form-group">
-                <label class="form-request__label form-request__label-text" for="name">
-                  <input class="form-request__input form-request__input-text" type="text" id="name" name="name" placeholder="Имя" required minlength="3" pattern="^[a-zA-Zа-яА-Я\s]+$">
-                </label>
+                <label class="form-request__label form-request__label-text visually-hidden" for="name">Name</label>
+                <input class="form-request__input form-request__input-text" type="text" id="name" name="name" placeholder="Имя" required minlength="3" pattern="^[a-zA-Zа-яА-Я\s]+$">
               </div>
               <div class="form-request__form-group">
-                <label class="form-request__label form-request__label-phone" for="phone">
-                  <input class="form-request__input form-request__label-phone" type="tel" id="phone" name="phone" placeholder="Телефон" required pattern="[0-9]+">
-                </label>
+                <label class="form-request__label form-request__label-phone visually-hidden" for="phone">Phone</label>
+                <input class="form-request__input form-request__label-phone" type="tel" id="phone" name="phone" placeholder="Телефон" required pattern="[0-9]+">
               </div>
               <button class="form-request__input-submit" type="submit" aria-label="Отправить"></button>
             </form>
@@ -627,22 +625,22 @@
         </div>
         <div class="form__wrapper contacts">
           <div class="contacts__wrapper">
-            <h3 class="contacts__title">Контакты</h3>
+            <h2 class="contacts__title">Контакты</h2>
             <ul class="contacts__list">
               <li class="contacts__item contacts__item--adress">
-                <h5 class="contacts__subtitle">Адрес:</h5>
+                <h3 class="contacts__subtitle">Адрес:</h3>
                 <address class="contacts__adress contacts__text">г. Омск, ул. 60 лет Октября, 7</address>
               </li>
               <li class="contacts__item contacts__item--work">
-                <h5 class="contacts__subtitle">График работы:</h5>
+                <h3 class="contacts__subtitle">График работы:</h3>
                 <p class="contacts__work contacts__text">Пн-Вс: с 8:00 до 22:00</p>
               </li>
               <li class="contacts__item contacts__item--phone">
-                <h5 class="contacts__subtitle">Телефон:</h5>
+                <h3 class="contacts__subtitle">Телефон:</h3>
                 <a class="contacts__phone contacts__text" href="tel:88005555555">8 800 555-55-55</a>
               </li>
               <li class="contacts__item contacts__item--mail">
-                <h5 class="contacts__subtitle">Email:</h5>
+                <h3 class="contacts__subtitle">Email:</h3>
                 <a class="contacts__mail contacts__text" href="mailto:oмск@supergym.ru?subject=Вопрос&body=Здравствуйте!">oмск@supergym.ru</a>
               </li>
             </ul>
@@ -700,7 +698,9 @@
       </div>
     </div>
   </footer>
-  <script type="module" src="js/main.js"></script>
+  <script src="js/price.js"></script>
+  <script type="module" src="js/index.js"></script>
+
 </body>
 
 </html>

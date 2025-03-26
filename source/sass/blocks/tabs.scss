@@ -5,15 +5,29 @@
   display: flex;
   flex-wrap: wrap;
   gap: 46px;
-  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
   box-sizing: border-box;
   height: 26px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: rgba(120, 120, 120, 0.2);
+    top: 24px;
+    z-index: 0;
+  }
 
   @media (min-width: $tablet) {
     width: 310px;
     margin: 0 auto 45px;
     padding: 0 0 25px;
     gap: 43px;
+
+    &::after {
+      top: 26px;
+    }
   }
 
   @media (min-width: $desktop) {
@@ -21,6 +35,10 @@
     margin: 0 auto 40px;
     padding: 0 0 28px;
     gap: 51px;
+
+    &::after {
+      top: 28px;
+    }
   }
 }
 
@@ -34,34 +52,54 @@
   color: rgba(16, 38, 84, 0.5);
   box-sizing: border-box;
   padding: 0 0 7px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 2px solid transparent;
+    top: 23px;
+    left: 0;
+    z-index: 10;
+  }
 
   @media (min-width: $tablet) {
     font-size: $font-size-18;
     line-height: 18px;
     padding-top: 2px;
+
+    &::after {
+      top: 26px;
+    }
   }
 
   @media (min-width: $desktop) {
     font-size: $font-size-20;
     line-height: 20px;
     padding-top: 0;
+
+    &::after {
+      top: 28px;
+    }
   }
 
-  &:hover {
+  &:hover,
+  &:hover::after {
     color: rgba(16, 38, 84, 0.7);
-    border-color: #787878;
+    border-bottom: 1px solid #787878;
   }
 
   &:focus,
   &:focus-visible {
     color: $color-basis;
-    border-color: $color-basis;
+    border-bottom: 2px solid $color-basis;
     outline: none;
   }
 
   // &:active {
   //   color: $color-basis;
-  //   border-color: #d10a42;
+  //   border-bottom: 2px solid #d10a42;
   // }
 
   &:disabled {
@@ -73,14 +111,49 @@
 
 .tabs__button--active {
   color: $color-basis;
-  border-bottom: 2px solid #d10a42;
   padding-bottom: 7px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 2px solid #d10a42;
+    top: 23px;
+    left: 0;
+    z-index: 10;
+  }
 
   @media (min-width: $tablet) {
     padding-bottom: 6px;
+
+    &::after {
+      top: 26px;
+    }
   }
 
   @media (min-width: $desktop) {
     padding-bottom: 8px;
+
+    &::after {
+      top: 28px;
+    }
   }
+
+  &:focus,
+  &:focus-visible,
+  &:focus::after,
+  &:focus-visible::after {
+    color: $color-basis;
+    border-bottom: 2px solid #d10a42;
+    outline: none;
+  }
+}
+
+.tabs__content {
+  display: none;
+}
+
+.tabs__content--active {
+  display: block;
 }
