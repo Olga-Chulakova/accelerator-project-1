@@ -51,10 +51,6 @@
   }
 }
 
-.form-request__form-group {
-  margin-top: -1px;
-}
-
 .form-request__input {
   font-family: $roboto;
   font-size: $font-size-14;
@@ -68,6 +64,8 @@
   position: relative;
   padding: 0;
   border-bottom: 1px solid #74819c;
+  box-sizing: border-box;
+  outline: none;
 
   &:hover {
     border-color: $color-additional;
@@ -78,7 +76,6 @@
     border-bottom: none;
     border: 1px solid $color-additional;
     outline: none;
-    min-height: 36px;
   }
 
   &:disabled {
@@ -87,10 +84,20 @@
   }
 }
 
-// .form-request__input:not(:placeholder-shown) {
-//   padding-left: 4px;
-//   padding-right: 4px;
-// }
+
+.form-request__form-group.invalid .form-request__input {
+  border-bottom-color: #ff121f;
+}
+
+.error-message {
+  font-family: $roboto;
+  font-size: $font-size-14;
+  line-height: 22px;
+  font-weight: 400;
+  color: #ff121f;
+  position: absolute;
+  margin-top: 2px;
+}
 
 .form-request__input::placeholder {
   font-family: $roboto;
@@ -100,6 +107,10 @@
   color: $color-additional;
   opacity: 40%;
   padding: 0;
+}
+
+.form-request__input:focus::placeholder {
+  color: transparent;
 }
 
 .form-request__input-submit {

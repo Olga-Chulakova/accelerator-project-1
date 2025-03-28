@@ -211,10 +211,13 @@
     <section class="juri" data-test="juri">
       <div class="juri__wrapper container">
         <h2 class="juri__title">Жюри</h2>
-        <div class="juri__card-wrapper">
-          <button class="juri__slider-button juri__slider-button--prev" type="button" aria-label="Назад"></button>
-          <ul class="juri__list">
-            <li class="juri__item" tabindex="0">
+        <div class="juri__buttons">
+          <button class="juri__slider-button juri__slider-button--prev swiper-button-prev" type="button" aria-label="Назад"></button>
+          <button class="juri__slider-button juri__slider-button--next swiper-button-next" type="button" aria-label="Вперед"></button>
+        </div>
+        <div class="juri__swiper swiper">
+          <ul class="juri__list swiper-wrapper">
+            <li class="juri__item swiper-slide" tabindex="0">
               <picture>
                 <source type="image/webp" width="260" height="300" srcset="img/juri-anna@1x.webp, img/juri-anna@2x.webp 2x">
                 <img class="juri__image" src="img/juri-anna@1x.jpg" srcset="img/juri-anna@2x.jpg 2x" width="260" height="300" alt="Член жюри Анна Павлова">
@@ -236,7 +239,7 @@
                 </ul>
               </div>
             </li>
-            <li class="juri__item" tabindex="0">
+            <li class="juri__item swiper-slide" tabindex="0">
               <picture>
                 <source type="image/webp" width="260" height="300" srcset="img/juri-alexey@1x.webp, img/juri-alexey@2x.webp 2x">
                 <img class="juri__image" src="img/juri-alexey@1x.jpg" srcset="img/juri-alexey@2x.jpg 2x" width="260" height="300" alt="Член жюри Алексей Лавров">
@@ -258,7 +261,7 @@
                 </ul>
               </div>
             </li>
-            <li class="juri__item" tabindex="0">
+            <li class="juri__item swiper-slide" tabindex="0">
               <picture>
                 <source type="image/webp" width="260" height="300" srcset="img/juri-alexander@1x.webp, img/juri-alexander@2x.webp 2x">
                 <img class="juri__image" src="img/juri-alexander@1x.jpg" srcset="img/juri-alexander@2x.jpg 2x" width="260" height="300" alt="Член жюри Александр Пашков">
@@ -280,7 +283,95 @@
                 </ul>
               </div>
             </li>
-            <li class="juri__item" tabindex="0">
+            <li class="juri__item swiper-slide" tabindex="0">
+              <picture>
+                <source type="image/webp" width="260" height="300" srcset="img/juri-maria@1x.webp, img/juri-maria@2x.webp 2x">
+                <img class="juri__image" src="img/juri-maria@1x.jpg" srcset="img/juri-maria@2x.jpg 2x" width="260" height="300" alt="Член жюри Мария Кетова">
+              </picture>
+              <p class="juri__name">Мария Кетова</p>
+              <div class="juri__item-wrapper info">
+                <p class="info__name">Мария Кетова</p>
+                <p class="info__discription">CrossFit</p>
+                <ul class="info__list">
+                  <li class="info__item">
+                    <p class="info__text">Certified Level 3 Trainer</p>
+                  </li>
+                  <li class="info__item">
+                    <p class="info__text">Победитель чемпионата России по CrossFit</p>
+                  </li>
+                  <li class="info__item">
+                    <p class="info__text">Опыт — 6 лет</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="juri__item swiper-slide" tabindex="0">
+              <picture>
+                <source type="image/webp" width="260" height="300" srcset="img/juri-anna@1x.webp, img/juri-anna@2x.webp 2x">
+                <img class="juri__image" src="img/juri-anna@1x.jpg" srcset="img/juri-anna@2x.jpg 2x" width="260" height="300" alt="Член жюри Анна Павлова">
+              </picture>
+              <p class="juri__name">Анна Павлова</p>
+              <div class="juri__item-wrapper info">
+                <p class="info__name">Анна Павлова</p>
+                <p class="info__discription">CrossFit</p>
+                <ul class="info__list">
+                  <li class="info__item">
+                    <p class="info__text">Certified Level 3 Trainer</p>
+                  </li>
+                  <li class="info__item">
+                    <p class="info__text">Победитель чемпионата России по CrossFit</p>
+                  </li>
+                  <li class="info__item">
+                    <p class="info__text">Опыт — 6 лет</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="juri__item swiper-slide" tabindex="0">
+              <picture>
+                <source type="image/webp" width="260" height="300" srcset="img/juri-alexey@1x.webp, img/juri-alexey@2x.webp 2x">
+                <img class="juri__image" src="img/juri-alexey@1x.jpg" srcset="img/juri-alexey@2x.jpg 2x" width="260" height="300" alt="Член жюри Алексей Лавров">
+              </picture>
+              <p class="juri__name">Алексей Лавров</p>
+              <div class="juri__item-wrapper info">
+                <p class="info__name">Алексей Лавров</p>
+                <p class="info__discription">CrossFit</p>
+                <ul class="info__list">
+                  <li class="info__item">
+                    <p class="info__text">Certified Level 3 Trainer</p>
+                  </li>
+                  <li class="info__item">
+                    <p class="info__text">Победитель чемпионата России по CrossFit</p>
+                  </li>
+                  <li class="info__item">
+                    <p class="info__text">Опыт — 6 лет</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="juri__item swiper-slide" tabindex="0">
+              <picture>
+                <source type="image/webp" width="260" height="300" srcset="img/juri-alexander@1x.webp, img/juri-alexander@2x.webp 2x">
+                <img class="juri__image" src="img/juri-alexander@1x.jpg" srcset="img/juri-alexander@2x.jpg 2x" width="260" height="300" alt="Член жюри Александр Пашков">
+              </picture>
+              <p class="juri__name">Александр Пашков</p>
+              <div class="juri__item-wrapper info">
+                <p class="info__name">Александр Пашков</p>
+                <p class="info__discription">CrossFit</p>
+                <ul class="info__list">
+                  <li class="info__item">
+                    <p class="info__text">Certified Level 3 Trainer</p>
+                  </li>
+                  <li class="info__item">
+                    <p class="info__text">Победитель чемпионата России по CrossFit</p>
+                  </li>
+                  <li class="info__item">
+                    <p class="info__text">Опыт — 6 лет</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="juri__item swiper-slide" tabindex="0">
               <picture>
                 <source type="image/webp" width="260" height="300" srcset="img/juri-maria@1x.webp, img/juri-maria@2x.webp 2x">
                 <img class="juri__image" src="img/juri-maria@1x.jpg" srcset="img/juri-maria@2x.jpg 2x" width="260" height="300" alt="Член жюри Мария Кетова">
@@ -303,7 +394,6 @@
               </div>
             </li>
           </ul>
-          <button class="juri__slider-button juri__slider-button--next" type="button" aria-label="Вперед"></button>
         </div>
       </div>
     </section>
@@ -389,181 +479,150 @@
         <h2 class="faq__title">Вопросы и ответы</h2>
         <div class="faq__tabs-wrapper faq-tab">
           <ul class="faq-tab__list">
-            <li class="faq-tab__item" data-tab="tab1">
-              <button class="faq-tab__button faq-tab__button--active" type="button">Центр</button>
+            <li class="faq-tab__item">
+              <button class="faq-tab__button faq-tab__button--active" type="button" data-tab="tab1" aria-label="Центр">Центр</button>
             </li>
-            <li class="faq-tab__item" data-tab="tab2">
-              <button class="faq-tab__button" type="button">Абонемент</button>
+            <li class="faq-tab__item">
+              <button class="faq-tab__button" type="button" data-tab="tab2" aria-label="Абонемент">Абонемент</button>
             </li>
-            <li class="faq-tab__item" data-tab="tab3">
-              <button class="faq-tab__button" type="button">Услуги</button>
+            <li class="faq-tab__item">
+              <button class="faq-tab__button" type="button" data-tab="tab3" aria-label="Услуги">Услуги</button>
             </li>
-            <li class="faq-tab__item" data-tab="tab4">
-              <button class="faq-tab__button" type="button">Правила</button>
+            <li class="faq-tab__item">
+              <button class="faq-tab__button" type="button" data-tab="tab4" aria-label="Правила">Правила</button>
             </li>
           </ul>
           <div class="faq-tab__content faq-tab__content--active accordion" id="tab1">
             <ul class="accordion__list">
               <li class="accordion__item">
-                <details class="accordion__content" open>
-                  <summary class="accordion__header">
-                    <h3 class="accordion__question">Как стать членом фитнес&#8209;центра?</h3>
-                    <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
-                  </summary>
-                  <div class="accordion__body">При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор. При&nbsp;покупке абонемента онлайн, анкета также заполняется онлайн и&nbsp;договор придёт вам на почту.
-                  </div>
-                </details>
+                <div class="accordion__control">
+                  <h3 class="accordion__question">Как стать членом фитнес&#8209;центра?</h3>
+                  <button class="accordion__button" type="button" aria-label="Развернуть"></button>
+                </div>
+                <div class="accordion__content">При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор. При&nbsp;покупке абонемента онлайн, анкета также заполняется онлайн и&nbsp;договор придёт вам на почту.
+                </div>
               </li>
               <li class="accordion__item">
-                <details class="accordion__content">
-                  <summary class="accordion__header">
-                    <h3 class="accordion__question">Где можно посмотреть расписание?</h3>
-                    <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
-                  </summary>
-                  <div class="accordion__body">Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.
-                  </div>
-                </details>
+                <div class="accordion__control">
+                  <h3 class="accordion__question">Где можно посмотреть расписание?</h3>
+                  <button class="accordion__button" type="button" aria-label="Развернуть"></button>
+                </div>
+                <div class="accordion__content">Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.
+                </div>
               </li>
               <li class="accordion__item">
-                <details class="accordion__content">
-                  <summary class="accordion__header">
-                    <h3 class="accordion__question">Есть кулеры в центре? Предоставляются полотенца?</h3>
-                    <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
-                  </summary>
-                  <div class="accordion__body">Да, в зале установлены кулеры с питьевой водой. Полотенца предоставляются бесплатно.</div>
-                </details>
+                <div class="accordion__control">
+                  <h3 class="accordion__question">Есть кулеры в центре? Предоставляются полотенца?</h3>
+                  <button class="accordion__button" type="button" aria-label="Развернуть"></button>
+                </div>
+                <div class="accordion__content">Да, в зале установлены кулеры с питьевой водой. Полотенца предоставляются бесплатно.</div>
               </li>
               <li class="accordion__item">
-                <details class="accordion__content">
-                  <summary class="accordion__header">
-                    <h3 class="accordion__question">Сколько тренеров работает в клубе и какова их&nbsp;квалификация?</h3>
-                    <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
-                  </summary>
-                  <div class="accordion__body">В нашем клубе работает более 10 квалифицированных тренеров с опытом работы и соответствующими сертификатами.</div>
-                </details>
+                <div class="accordion__control">
+                  <h3 class="accordion__question">Сколько тренеров работает в клубе и какова их&nbsp;квалификация?</h3>
+                  <button class="accordion__button" type="button" aria-label="Развернуть"></button>
+                </div>
+                <div class="accordion__content">В нашем клубе работает более 10 квалифицированных тренеров с опытом работы и соответствующими сертификатами.</div>
               </li>
             </ul>
           </div>
           <div class="faq-tab__content accordion" id="tab2">
             <ul class="accordion__list">
               <li class="accordion__item">
-                <details class="accordion__content" open>
-                  <summary class="accordion__header">
-                    <h3 class="accordion__question">Занятия с тренером входят в абонемент?</h3>
-                    <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
-                  </summary>
-                  <div class="accordion__body">При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.
-                  </div>
-                </details>
+                <div class="accordion__control" open>
+                  <h3 class="accordion__question">Занятия с тренером входят в абонемент?</h3>
+                  <button class="accordion__button" type="button" aria-label="Развернуть"></button>
+                </div>
+                <div class="accordion__content">При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.
+                </div>
               </li>
               <li class="accordion__item">
-                <details class="accordion__content">
-                  <summary class="accordion__header">
-                    <h3 class="accordion__question">Можно ли заморозить абонемент?</h3>
-                    <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
-                  </summary>
-                  <div class="accordion__body">а, возможность заморозки есть. Условия зависят от типа абонемента, уточняйте у менеджеров.</div>
-                </details>
+                <div class="accordion__control">
+                  <h3 class="accordion__question">Можно ли заморозить абонемент?</h3>
+                  <button class="accordion__button" type="button" aria-label="Развернуть"></button>
+                </div>
+                <div class="accordion__content">а, возможность заморозки есть. Условия зависят от типа абонемента, уточняйте у менеджеров.</div>
               </li>
               <li class="accordion__item">
-                <details class="accordion__content">
-                  <summary class="accordion__header">
-                    <h3 class="accordion__question">Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h3>
-                    <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
-                  </summary>
-                  <div class="accordion__body">Лимита по посещениям тренажерного зала нет. Групповые занятия оплачиваются дополнительно.</div>
-                </details>
+                <div class="accordion__control">
+                  <h3 class="accordion__question">Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h3>
+                  <button class="accordion__button" type="button" aria-label="Развернуть"></button>
+                </div>
+                <div class="accordion__content">Лимита по посещениям тренажерного зала нет. Групповые занятия оплачиваются дополнительно.</div>
               </li>
               <li class="accordion__item">
-                <details class="accordion__content">
-                  <summary class="accordion__header">
-                    <h3 class="accordion__question">Что такое семейный доступ и доступ для друзей?</h3>
-                    <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
-                  </summary>
-                  <div class="accordion__body">Семейный доступ – это как абонемент "Всё включено" для всей вашей семьи под одной крышей, вместе к здоровому образу жизни! А доступ для друзей – отличный способ привести приятелей в зал и разделить с ними радость от тренировок, даже если вы живете в разных концах города!</div>
-                </details>
+                <div class="accordion__control">
+                  <h3 class="accordion__question">Что такое семейный доступ и доступ для друзей?</h3>
+                  <button class="accordion__button" type="button" aria-label="Развернуть"></button>
+                </div>
+                <div class="accordion__content">Семейный доступ – это как абонемент "Всё включено" для всей вашей семьи под одной крышей, вместе к здоровому образу жизни! А доступ для друзей – отличный способ привести приятелей в зал и разделить с ними радость от тренировок, даже если вы живете в разных концах города!
+                </div>
               </li>
             </ul>
           </div>
           <div class="faq-tab__content accordion" id="tab3">
             <ul class="accordion__list">
               <li class="accordion__item">
-                <details class="accordion__content" open>
-                  <summary class="accordion__header">
-                    <h3 class="accordion__question">Предлагает ли клуб услуги по консультированию по вопросам питания?</h3>
-                    <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
-                  </summary>
-                  <div class="accordion__body">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.
-                  </div>
-                </details>
+                <div class="accordion__control" open>
+                  <h3 class="accordion__question">Предлагает ли клуб услуги по консультированию по вопросам питания?</h3>
+                  <button class="accordion__button" type="button" aria-label="Развернуть"></button>
+                </div>
+                <div class="accordion__content">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.
+                </div>
               </li>
               <li class="accordion__item">
-                <details class="accordion__content">
-                  <summary class="accordion__header">
-                    <h3 class="accordion__question">Проводятся ли в клубе какие-либо мероприятия или соревнования?</h3>
-                    <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
-                  </summary>
-                  <div class="accordion__body">Да, ежегодно у нас проводятся областные мероприятия по пауэрлифтингу</div>
-                </details>
+                <div class="accordion__control">
+                  <h3 class="accordion__question">Проводятся ли в клубе какие-либо мероприятия или соревнования?</h3>
+                  <button class="accordion__button" type="button" aria-label="Развернуть"></button>
+                </div>
+                <div class="accordion__content">Да, ежегодно у нас проводятся областные мероприятия по пауэрлифтингу</div>
               </li>
               <li class="accordion__item">
-                <details class="accordion__content">
-                  <summary class="accordion__header">
-                    <h3 class="accordion__question">Можно ли приобрести в центре спортивное питание?</h3>
-                    <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
-                  </summary>
-                  <div class="accordion__body">Конечно, у нас разнообразное спортивное питание многих фирм.</div>
-                </details>
+                <div class="accordion__control">
+                  <h3 class="accordion__question">Можно ли приобрести в центре спортивное питание?</h3>
+                  <button class="accordion__button" type="button" aria-label="Развернуть"></button>
+                </div>
+                <div class="accordion__content">Конечно, у нас разнообразное спортивное питание многих фирм.</div>
               </li>
               <li class="accordion__item">
-                <details class="accordion__content">
-                  <summary class="accordion__header">
-                    <h3 class="accordion__question">Есть ли в центре детская комната?</h3>
-                    <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
-                  </summary>
-                  <div class="accordion__body">Да, у нас присутствует детская комната с множеством игровых развлечений.</div>
-                </details>
+                <div class="accordion__control">
+                  <h3 class="accordion__question">Есть ли в центре детская комната?</h3>
+                  <button class="accordion__button" type="button" aria-label="Развернуть"></button>
+                </div>
+                <div class="accordion__content">Да, у нас присутствует детская комната с множеством игровых развлечений.</div>
               </li>
             </ul>
           </div>
           <div class="faq-tab__content accordion" id="tab4">
             <ul class="accordion__list">
               <li class="accordion__item">
-                <details class="accordion__content" open>
-                  <summary class="accordion__header">
-                    <h3 class="accordion__question">Есть в фитнес-центре дресс-код?</h3>
-                    <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
-                  </summary>
-                  <div class="accordion__body">Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).
-                  </div>
-                </details>
+                <div class="accordion__control" open>
+                  <h3 class="accordion__question">Есть в фитнес-центре дресс-код?</h3>
+                  <button class="accordion__button" type="button" aria-label="Развернуть"></button>
+                </div>
+                <div class="accordion__content">Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).
+                </div>
               </li>
               <li class="accordion__item">
-                <details class="accordion__content">
-                  <summary class="accordion__header">
-                    <h3 class="accordion__question">Можно ли приводить с собой детей на тренировки?</h3>
-                    <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
-                  </summary>
-                  <div class="accordion__body">Детям до 16 лет посещение разрешено только в сопровождении взрослых или на детских занятиях.</div>
-                </details>
+                <div class="accordion__control">
+                  <h3 class="accordion__question">Можно ли приводить с собой детей на тренировки?</h3>
+                  <button class="accordion__button" type="button" aria-label="Развернуть"></button>
+                </div>
+                <div class="accordion__content">Детям до 16 лет посещение разрешено только в сопровождении взрослых или на детских занятиях.</div>
               </li>
               <li class="accordion__item">
-                <details class="accordion__content">
-                  <summary class="accordion__header">
-                    <h3 class="accordion__question">Какие дополнительные правила посещения центра?</h3>
-                    <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
-                  </summary>
-                  <div class="accordion__body">Соблюдайте технику безопасности, используйте полотенце, возвращайте оборудование на место.</div>
-                </details>
+                <div class="accordion__control">
+                  <h3 class="accordion__question">Какие дополнительные правила посещения центра?</h3>
+                  <button class="accordion__button" type="button" aria-label="Развернуть"></button>
+                </div>
+                <div class="accordion__content">Соблюдайте технику безопасности, используйте полотенце, возвращайте оборудование на место.</div>
               </li>
               <li class="accordion__item">
-                <details class="accordion__content">
-                  <summary class="accordion__header">
-                    <h3 class="accordion__question">Нужна ли медицинская справка для посещения залов и бассейна?</h3>
-                    <button class="accordion__indicator" type="button" aria-label="Развернуть"></button>
-                  </summary>
-                  <div class="accordion__body">Допускаются клиенты только с медицинской справкой</div>
-                </details>
+                <div class="accordion__control">
+                  <h3 class="accordion__question">Нужна ли медицинская справка для посещения залов и бассейна?</h3>
+                  <button class="accordion__button" type="button" aria-label="Развернуть"></button>
+                </div>
+                <div class="accordion__content">Допускаются клиенты только с медицинской справкой</div>
               </li>
             </ul>
           </div>
@@ -573,35 +632,41 @@
     <section class="reviews" data-test="reviews">
       <div class="reviews__wrapper">
         <h2 class="reviews__title">Отзывы</h2>
-        <div class="reviews__card-wrapper">
-          <button class="reviews__slider-button reviews__slider-button--prev" type="button" aria-label="Назад"></button>
-          <ul class="reviews__list">
-            <li class="reviews__item reviews__item--active">
-              <div class="reviews__image-wrapper">
-                <picture>
-                  <source type="image/webp" width="2943" height="4096" srcset="img/reviews@1x.webp, img/reviews@2x.webp 2x">
-                  <img class="reviews__image" src="img/reviews@1x.jpg" srcset="img/reviews@2x.jpg 2x" width="2943" height="4096" alt="Клиент Анна Орлова">
-                </picture>
-              </div>
-              <div class="reviews__text-wrapper">
-                <p class="reviews__name">Анна Орлова</p>
-                <p class="reviews__text">«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+        <div class="reviews__button">
+          <button class="reviews__slider-button reviews__slider-button--prev swiper-button-prev" type="button" aria-label="Назад"></button>
+          <button class="reviews__slider-button reviews__slider-button--next swiper-button-next" type="button" aria-label="Вперед"></button>
+        </div>
+        <div class="reviews__swiper swiper">
+          <ul class="reviews__list swiper-wrapper">
+            <li class="reviews__item swiper-slide">
+              <div class="reviews__item-wrapper">
+                <div class="reviews__image-wrapper">
+                  <picture>
+                    <source type="image/webp" width="2943" height="4096" srcset="img/reviews@1x.webp, img/reviews@2x.webp 2x">
+                    <img class="reviews__image" src="img/reviews@1x.jpg" srcset="img/reviews@2x.jpg 2x" width="2943" height="4096" alt="Клиент Анна Орлова">
+                  </picture>
+                </div>
+                <div class="reviews__text-wrapper">
+                  <p class="reviews__name">Анна Орлова</p>
+                  <p class="reviews__text">«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+                </div>
               </div>
             </li>
-            <li class="reviews__item visually-hidden">
-              <div class="reviews__image-wrapper">
-                <picture>
-                  <source type="image/webp" width="68" height="68" srcset="img/reviews@1x.webp, img/reviews@2x.webp 2x">
-                  <img class="reviews__image" src="img/reviews@1x.jpg" srcset="img/reviews@2x.jpg 2x" width="68" height="68" alt="Клиент Анна Орлова">
-                </picture>
-              </div>
-              <div class="reviews__text-wrapper">
-                <p class="reviews__name">Мария Иванова</p>
-                <p class="reviews__text">«Хожу в Supergym уже 3 года. Я довольна»</p>
+            <li class="reviews__item swiper-slide">
+              <div class="reviews__item-wrapper">
+                <div class="reviews__image-wrapper">
+                  <picture>
+                    <source type="image/webp" width="2943" height="4096" srcset="img/reviews@1x.webp, img/reviews@2x.webp 2x">
+                    <img class="reviews__image" src="img/reviews@1x.jpg" srcset="img/reviews@2x.jpg 2x" width="2943" height="4096" alt="Клиент Мария Орлова">
+                  </picture>
+                </div>
+                <div class="reviews__text-wrapper">
+                  <p class="reviews__name">Мария Иванова</p>
+                  <p class="reviews__text">«Хожу в Supergym уже 3 года. Я довольна»</p>
+                </div>
               </div>
             </li>
           </ul>
-          <button class="reviews__slider-button reviews__slider-button--next" type="button" aria-label="Вперед"></button>
         </div>
       </div>
     </section>
@@ -610,16 +675,16 @@
         <div class="form__wrapper form-request">
           <div class="form-request__wrapper">
             <h2 class="form-request__title">Бесплатное занятие</h2>
-            <form class="form-request__filter" action="https://echo.htmlacademy.ru/" method="post">
+            <form class="form-request__filter" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off" novalidate>
               <div class="form-request__form-group">
                 <label class="form-request__label form-request__label-text visually-hidden" for="name">Name</label>
-                <input class="form-request__input form-request__input-text" type="text" id="name" name="name" placeholder="Имя" required minlength="3" pattern="^[a-zA-Zа-яА-Я\s]+$">
+                <input class="form-request__input form-request__input-text" type="text" id="name" name="name" placeholder="Имя" required minlength="2" pattern="^[a-zA-Zа-яА-Я\s]+$" data-required="Заполните поле" data-pattern-mismatch="Введите только буквы и пробелы" data-minlength="Введите букв не меньше 2">
               </div>
               <div class="form-request__form-group">
                 <label class="form-request__label form-request__label-phone visually-hidden" for="phone">Phone</label>
-                <input class="form-request__input form-request__label-phone" type="tel" id="phone" name="phone" placeholder="Телефон" required pattern="[0-9]+">
+                <input class="form-request__input form-request__input-phone" type="tel" id="phone" name="phone" placeholder="Телефон" required pattern="[0-9]+" data-required="Заполните поле" data-pattern-mismatch="Введите только числа">
               </div>
-              <button class="form-request__input-submit" type="submit" aria-label="Отправить"></button>
+              <button class="form-request__input-submit" type="submit" aria-label="Отправить">Отправить</button>
             </form>
           </div>
         </div>
@@ -698,8 +763,7 @@
       </div>
     </div>
   </footer>
-  <script src="js/price.js"></script>
-  <script type="module" src="js/index.js"></script>
+  <script type="module" src="js/main.js"></script>
 
 </body>
 

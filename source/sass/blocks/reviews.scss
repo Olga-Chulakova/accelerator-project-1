@@ -39,15 +39,150 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 0 0 75px;
+    margin: 0 0 76px;
   }
 }
 
-.reviews__card-wrapper {
+.reviews__button {
+  position: relative;
+}
+
+.reviews__slider-button.swiper-button-prev,
+.reviews__slider-button.swiper-button-next {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: transparent;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 50%;
+  z-index: 10;
+  box-sizing: border-box;
+  background-color: transparent;
+  display: none;
+  align-self: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 32px;
+    mask: url("/__spritemap#sprite-arrow-view");
+    background-color: $color-basis;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.2s ease-in-out;
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    z-index: 0;
+    pointer-events: none;
+    transition: border-color 0.2s ease-in-out;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:disabled:focus-visible {
+    outline: none;
+  }
+
+  &:disabled::before {
+    background-color: rgba(16, 38, 84, 0.3);
+  }
+
+  &:disabled::after {
+    border-color: transparent;
+  }
+
+  @media (min-width: $tablet) {
+    display: block;
+
+    &:not(:disabled):hover::after,
+    &:not(:disabled):focus::after,
+    &:not(:disabled):focus-visible::after,
+    &:not(:disabled):active::after {
+      border-color: $color-basis;
+    }
+  }
+}
+
+.reviews__slider-button:not(:disabled):focus,
+.reviews__slider-button:not(:disabled):focus-visible {
+  outline: none;
+  background-color: #e8e8e8;
+}
+
+.reviews__slider-button--prev.swiper-button-prev {
+  transform: rotate(-180deg);
+
+  @media (min-width: $tablet) {
+    left: -17px;
+    top: 117px;
+  }
+
+  @media (min-width: $desktop) {
+    left: 178px;
+    top: 126px;
+  }
+}
+
+.reviews__slider-button--next.swiper-button-next {
+  transform: rotate(0deg);
+
+  @media (min-width: $tablet) {
+    right: -17px;
+    top: 117px;
+  }
+
+  @media (min-width: $desktop) {
+    right: 178px;
+    top: 126px;
+  }
+}
+
+.reviews__slider-button--prev:not(:disabled):active,
+.reviews__slider-button--next:not(:disabled):active {
+  background-color: $color-basis;
+}
+
+.reviews__slider-button--prev:not(:disabled):active::before,
+.reviews__slider-button--next:not(:disabled):active::before {
+  background-color: $color-additional;
+}
+
+.reviews__swiper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  position: relative;
+  width: 240px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: 500px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 560px;
+  }
 }
 
 .reviews__list {
@@ -59,29 +194,37 @@
 .reviews__item {
   padding: 30px 25px 29px;
   box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
   background-color: #1c3374;
   box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
   width: 240px;
-  height: 328px;
+  height: auto;
   gap: 10px;
 
   @media (min-width: $tablet) {
     width: 500px;
-    height: 242px;
     padding: 40px 30px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 560px;
+    padding: 60px;
+  }
+}
+
+.reviews__item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  @media (min-width: $tablet) {
     flex-direction: row;
     gap: 40px;
     align-items: flex-start;
   }
 
   @media (min-width: $desktop) {
-    width: 560px;
-    height: 258px;
-    padding: 60px;
     gap: 30px;
   }
 }
@@ -152,127 +295,6 @@
     text-align: left;
     font-size: $font-size-16;
     line-height: 24px;
-  }
-}
-
-.reviews__slider-button {
-  position: relative; /* Для позиционирования */
-  width: 50px; /* Размеры кнопки */
-  height: 50px;
-  border: transparent; /* Убираем стандартную рамку */
-  cursor: pointer;
-  padding: 0;
-  border-radius: 50%; /* Делаем кнопку круглой */
-  z-index: 10; /* Чтобы кнопка была выше обводки */
-  box-sizing: border-box; /* Чтобы border не влиял на размеры */ /* Прозрачный фон */
-  background-color: transparent;
-  display: none;
-  align-self: center;
-
-  @media (min-width: $tablet) {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Центрируем иконку */
-  }
-
-
-  /* Стили для SVG-иконки (псевдоэлемент ::before) */
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 16px;
-    height: 32px;
-    mask: url("/__spritemap#sprite-arrow-view");
-    background-color: $color-basis;
-    mask-size: cover;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: background-color 0.2s ease-in-out;
-    z-index: 1;
-  }
-
-  /* Стили для обводки (псевдоэлемент ::after) */
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 1px solid transparent;
-    box-sizing: border-box;
-    z-index: 0;
-    pointer-events: none;
-    transition: border-color 0.2s ease-in-out;
-  }
-
-  &:not(:disabled):hover::after,
-  &:not(:disabled):focus::after,
-  &:not(:disabled):focus-visible::after,
-  &:not(:disabled):active::after {
-    border-color: $color-basis; /* Показываем обводку */
-  }
-
-  &:not(:disabled):active {
-    background-color: $color-basis;
-  }
-
-  &:not(:disabled):active::before {
-    background-color: $color-additional;
-  }
-
-  &:not(:disabled):focus,
-  &:not(:disabled):focus-visible {
-    outline: none;
-    background-color: #e8e8e8;
-  }
-
-
-  /* Стили для отключенной кнопки */
-  &:disabled {
-    cursor: not-allowed; /* Меняем курсор */
-  }
-
-  &:disabled:focus-visible {
-    outline: none; /* Убираем обводку фокуса */
-  }
-
-  &:disabled::before {
-    background-color: rgba(16, 38, 84, 0.3); /* Цвет SVG-иконки */
-  }
-
-  &:disabled::after {
-    border-color: transparent; /* Убираем обводку */
-  }
-}
-
-
-.reviews__slider-button--prev {
-  transform: rotate(-180deg);
-
-  @media (min-width: $tablet) {
-    left: -56px;
-  }
-
-  @media (min-width: $desktop) {
-    left: -71px;
-  }
-}
-
-.reviews__slider-button--next {
-  transform: rotate(0deg);
-
-  @media (min-width: $tablet) {
-    right: -56px;
-  }
-
-  @media (min-width: $desktop) {
-    right: -71px;
   }
 }
 

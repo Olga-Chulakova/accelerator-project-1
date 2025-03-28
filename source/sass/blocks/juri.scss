@@ -1,5 +1,6 @@
 .juri {
   padding: 41px 0 40px;
+  position: relative;
 
   @media (min-width: $tablet) {
     padding: 30px 0 60px;
@@ -26,25 +27,78 @@
   }
 }
 
-.juri__card-wrapper {
+.juri__buttons {
   position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-
-  @media (min-width: $tablet) {
-    padding: 0 6px;
-  }
-
-  @media (min-width: $desktop) {
-    padding: 0;
-  }
 }
 
-.juri__slider-button {
-  position: relative;
+// .juri__slider-button {
+//   border-radius: 50%;
+//   background-color: transparent;
+//   border: 1px solid transparent;
+// }
+
+// .juri__buttons .swiper-button-prev {
+//   display: none;
+
+//   @media (min-width: $tablet) {
+//     display: block;
+//     width: 50px;
+//     height: 50px;
+//     top: 140px;
+//     left: 0;
+//   }
+
+//   @media (min-width: $desktop) {
+//     left: -35px;
+//   }
+// }
+
+// .juri__buttons .swiper-button-next {
+//   display: none;
+
+//   @media (min-width: $tablet) {
+//     display: block;
+//     width: 50px;
+//     height: 50px;
+//     top: 140px;
+//     right: 0;
+//   }
+
+//   @media (min-width: $desktop) {
+//     right: -35px;
+//   }
+// }
+
+// .juri__buttons .swiper-button-prev::after {
+//   content: "";
+//   position: absolute;
+//   display: block;
+//   width: 20px;
+//   height: 34px;
+//   mask: url("/__spritemap#sprite-arrow-view");
+//   background-color: $color-basis;
+//   mask-repeat: no-repeat;
+//   transform: rotate(180deg);
+//   top: 12px;
+//   left: 7px;
+// }
+
+// .juri__buttons .swiper-button-next::after {
+//   content: "";
+//   position: absolute;
+//   display: block;
+//   width: 20px;
+//   height: 34px;
+//   mask: url("/__spritemap#sprite-arrow-view");
+//   background-color: $color-basis;
+//   mask-repeat: no-repeat;
+//   top: 7px;
+//   left: 17px;
+// }
+
+.juri__slider-button.swiper-button-prev,
+.juri__slider-button.swiper-button-next {
+  position: absolute;
   width: 50px;
   height: 50px;
   border: transparent;
@@ -57,16 +111,8 @@
   display: none;
   align-self: center;
 
-  @media (min-width: $tablet) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
-  @media (min-width: $desktop) {
-    position: absolute;
-  }
-
+  /* Стили для иконки */
   &::before {
     content: "";
     position: absolute;
@@ -85,6 +131,7 @@
     z-index: 1;
   }
 
+  /* Стили для бордера */
   &::after {
     content: "";
     position: absolute;
@@ -95,31 +142,13 @@
     border-radius: 50%;
     border: 1px solid transparent;
     box-sizing: border-box;
-    z-index: 0; /* Под иконкой */
+    z-index: 0;
     pointer-events: none;
     transition: border-color 0.2s ease-in-out;
   }
 
-  &:not(:disabled):hover::after,
-  &:not(:disabled):focus::after,
-  &:not(:disabled):focus-visible::after,
-  &:not(:disabled):active::after {
-    border-color: $color-basis;
-  }
-
-  &:not(:disabled):focus,
-  &:not(:disabled):focus-visible {
-    outline: none;
-    background-color: #e8e8e8;
-  }
-
-
   &:disabled {
     cursor: not-allowed;
-  }
-
-  &:disabled:focus-visible {
-    outline: none;
   }
 
   &:disabled::before {
@@ -129,57 +158,87 @@
   &:disabled::after {
     border-color: transparent;
   }
+
+  @media (min-width: $tablet) {
+    display: flex;
+
+    &:not(:disabled):hover::after,
+    &:not(:disabled):focus::after,
+    &:not(:disabled):focus-visible::after,
+    &:not(:disabled):active::after {
+      border-color: $color-basis;
+    }
+  }
 }
 
+.juri__slider-button:not(:disabled):focus,
+.juri__slider-button:not(:disabled):focus-visible {
+  outline: none;
+  background-color: #e8e8e8;
+}
 
-.juri__slider-button--prev {
+.juri__slider-button--prev.swiper-button-prev {
   transform: rotate(-180deg);
 
   @media (min-width: $tablet) {
-    left: -17px;
+    top: 148px;
+    left: -12px;
   }
 
   @media (min-width: $desktop) {
-    top: 122px;
+    top: 146px;
     left: -69px;
   }
 }
 
-.juri__slider-button--next {
+.juri__slider-button--next.swiper-button-next {
   transform: rotate(0deg);
 
   @media (min-width: $tablet) {
-    right: -17px;
+    top: 148px;
+    right: -12px;
   }
 
   @media (min-width: $desktop) {
-    top: 122px;
+    top: 146px;
     right: -71px;
   }
 }
 
-.juri__slider-button--prev,
-.juri__slider-button--next {
-  &:not(:disabled):active {
-    background-color: $color-basis;
-  }
-
-  &:not(:disabled):active::before {
-    background-color: $color-additional;
-  }
+.juri__slider-button--prev:not(:disabled):active,
+.juri__slider-button--next:not(:disabled):active {
+  background-color: $color-basis;
 }
 
-.juri__list {
-  padding: 0;
-  list-style-type: none;
+.juri__slider-button--prev:not(:disabled):active::before,
+.juri__slider-button--next:not(:disabled):active::before {
+  background-color: $color-additional;
+}
+
+
+.juri__swiper {
+  position: relative;
   width: 260px;
   margin: 0 auto;
 
   @media (min-width: $tablet) {
     width: 560px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1160px;
+  }
+}
+
+
+.juri__list {
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet) {
+    width: 560px;
     display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
   }
 
   @media (min-width: $desktop) {
@@ -208,10 +267,8 @@
   }
 }
 
-// .juri__item:hover .info {
-//   @media (min-width: $desktop) {
-//     display: block;
-//   }
+// .juri__item.juri__item--focused .info {
+//   display: block;
 // }
 
 .juri__image {
@@ -227,11 +284,8 @@
   margin: 0;
   position: absolute;
   bottom: 24px;
-
-  // left: 50%;
-  // transform: translateX(-50%);
-  // width: 90%;
-  // text-align: center;
+  text-align: center;
+  width: 100%;
 }
 
 .juri__item:focus .juri__name,

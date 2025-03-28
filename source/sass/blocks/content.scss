@@ -56,17 +56,10 @@
 
   &:hover::before,
   &:focus::before,
+  &:focus-within::before,
   &:focus-visible::before {
     opacity: 1;
     outline: none;
-  }
-
-  &:hover .content__link,
-  &:focus .content__link,
-  &:focus-visible .content__link {
-    border: none;
-    background-image: linear-gradient(135deg, #ed0233, #003fb7);
-    color: $color-additional;
   }
 }
 

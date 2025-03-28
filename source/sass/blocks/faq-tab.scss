@@ -50,6 +50,11 @@
     outline: none;
   }
 
+  &:focus,
+  &:focus-visible {
+    background-color: $color-additional;
+  }
+
   &:disabled {
     color: #c8c9cc;
     background: transparent;

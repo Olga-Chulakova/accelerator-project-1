@@ -1,2 +1,0 @@
-import './iframe-video';
-
