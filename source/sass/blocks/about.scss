@@ -74,7 +74,7 @@
   }
 }
 
-.about__text {
+.about p {
   font-family: $roboto;
   font-size: $font-size-14;
   line-height: 22px;
@@ -98,7 +98,7 @@
   }
 }
 
-.about__addition-text {
+.about span {
   display: none;
 
   @media (min-width: $desktop) {
@@ -152,7 +152,7 @@
     width: 270px;
     height: 170px;
     left: 50%;
-    top: 170px;
+    top: 175px;
     transform: translateX(-50%) translateY(50%);
   }
 
@@ -161,6 +161,7 @@
     width: 360px;
     height: 230px;
     left: 1px;
+    top: 169px;
     transform: translateX(-28%) translateY(50%);
   }
 }
