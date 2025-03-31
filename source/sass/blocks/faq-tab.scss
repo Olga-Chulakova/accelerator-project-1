@@ -24,7 +24,7 @@
   color: $color-basis;
   text-align: center;
   width: 140px;
-  height: 46px;
+  min-height: 46px;
   box-sizing: border-box;
   padding: 14px;
   border: 1px solid rgba(16, 38, 84, 0.2);
@@ -32,15 +32,15 @@
 
   @media (min-width: $tablet) {
     width: 162px;
-    height: 54px;
-    padding: 18px;
+    min-height: 54px;
+    padding: 17px;
     font-size: $font-size-18;
     line-height: 18px;
   }
 
   @media (min-width: $desktop) {
     width: 260px;
-    padding: 20px;
+    padding: 18px 20px 15px;
   }
 
   &:hover,

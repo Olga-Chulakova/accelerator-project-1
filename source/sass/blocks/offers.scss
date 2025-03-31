@@ -210,13 +210,13 @@
   }
 
 
-  &:focus::after,
-  &:focus-visible::after {
+  &:not([disabled]):focus::after,
+  &:not([disabled]):focus-visible::after {
     display: none;
   }
 
-  &:focus::before,
-  &:focus-visible::before {
+  &:not([disabled]):focus::before,
+  &:not([disabled]):focus-visible::before {
     border-color: $color-additional;
   }
 
@@ -240,17 +240,16 @@
     display: none;
   }
 
-  // &:active:focus::before,
-  // &:active:focus-visible::before {
-  //   opacity: 1;
-  //   display: block;
-  // }
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 
-  // &:focus:active::before,
-  // &:focus-visible:active::before {
-  //   display: none;
-  //   border: none;
-  // }
+  &[disabled]::after {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 }
 
 .offers__image {
@@ -264,6 +263,7 @@
   width: 290px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 30px;
 
   @media (min-width: $tablet) {
@@ -366,12 +366,33 @@
     }
   }
 
+  &:hover {
+    opacity: 0.8;
+  }
+
   &:hover::after {
+    background-color: #1c3374;
+    opacity: 0.8;
+  }
+
+  &:not([disabled]):focus::before,
+  &:not([disabled]):focus-visible::before {
+    border-color: #1c3374;
+  }
+
+  &:active::after {
     background-color: #1c3374;
   }
 
-  &:focus::before,
-  &:focus-visible::before {
-    border-color: #1c3374;
+  &[disabled] {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &[disabled]::after {
+    opacity: 0.3;
+    background-color: #1c3374;
+    cursor: not-allowed;
   }
 }

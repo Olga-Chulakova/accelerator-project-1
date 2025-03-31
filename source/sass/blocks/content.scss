@@ -117,6 +117,7 @@
     font-size: 80px;
     line-height: 120px;
     color: #e8e8e8;
+    opacity: 0.48;
     vertical-align: top;
     z-index: -1;
     height: 100%;
@@ -193,7 +194,7 @@
   }
 
 
-  &:hover {
+  &:not([disabled]):hover {
     border: none;
   }
 
@@ -205,23 +206,32 @@
     outline: none;
   }
 
-  &:active {
+  &:not([disabled]):active {
     border: none;
     color: rgba(255, 255, 255, 0.7);
   }
+}
 
-  &[disabled] {
-    border-color: $color-basis;
-    color: $color-basis;
-    opacity: 30%;
-    cursor: not-allowed;
-  }
+.content__link[disabled] {
+  border-color: $color-basis;
+  color: $color-basis;
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
 
-  &[disabled]:hover,
-  &[disabled]:focus,
-  &[disabled]:active {
-    border-color: $color-basis;
-    color: $color-basis;
-    opacity: 30%;
-  }
+
+.content__link[disabled]:hover,
+.content__link[disabled]:focus,
+.content__link[disabled]:focus-visible,
+.content__link[disabled]:active {
+  background-image: none;
+  background-color: transparent;
+  color: $color-basis;
+  border-color: $color-basis;
+  box-shadow: none;
+  opacity: 0.3;
+  cursor: not-allowed;
+  outline: none;
+  pointer-events: none;
 }

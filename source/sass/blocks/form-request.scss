@@ -63,7 +63,7 @@
   color: $color-additional;
   position: relative;
   padding: 0;
-  border-bottom: 1px solid #74819c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   box-sizing: border-box;
   outline: none;
 
@@ -71,8 +71,8 @@
     border-color: $color-additional;
   }
 
-  &:focus,
-  &:focus-visible {
+  &:not(:disabled):focus,
+  &:not(:disabled):focus-visible {
     border-bottom: none;
     border: 1px solid $color-additional;
     outline: none;
@@ -81,9 +81,24 @@
   &:disabled {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     color: rgba(255, 255, 255, 0.4);
+    cursor: not-allowed;
+    pointer-events: none;
   }
 }
 
+.form-request__input:not(:disabled):focus::placeholder {
+  color: transparent;
+}
+
+.form-request__input::placeholder {
+  font-family: $roboto;
+  font-size: $font-size-14;
+  line-height: 22px;
+  font-weight: 300;
+  color: $color-additional;
+  opacity: 40%;
+  padding: 0;
+}
 
 .form-request__form-group.invalid .form-request__input {
   border-bottom-color: #ff121f;
@@ -97,20 +112,6 @@
   color: #ff121f;
   position: absolute;
   margin-top: 2px;
-}
-
-.form-request__input::placeholder {
-  font-family: $roboto;
-  font-size: $font-size-14;
-  line-height: 22px;
-  font-weight: 300;
-  color: $color-additional;
-  opacity: 40%;
-  padding: 0;
-}
-
-.form-request__input:focus::placeholder {
-  color: transparent;
 }
 
 .form-request__input-submit {

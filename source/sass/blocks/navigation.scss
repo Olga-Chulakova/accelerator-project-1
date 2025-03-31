@@ -72,4 +72,18 @@
   &:active:hover::before {
     display: none;
   }
+
+  &[disabled] {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &[disabled]::after {
+    display: none;
+  }
+
+  &[disabled]::before {
+    display: none;
+  }
 }

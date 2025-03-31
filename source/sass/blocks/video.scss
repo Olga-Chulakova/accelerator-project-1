@@ -1,16 +1,20 @@
+.video__container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 соотношение сторон (height / width * 100) */
+  height: 0;
+  overflow: hidden;
+}
 
 .video__iframe {
-  width: 100%;
   object-fit: cover;
   border: none;
   display: none;
-
-
-  @media (min-width: $tablet) {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
   @media (min-width: $desktop) {
     left: 1px;
@@ -18,16 +22,14 @@
 }
 
 .video__image {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
   width: 100%;
   object-fit: cover;
   z-index: 10;
 
-  @media (min-width: $tablet) {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
 
   @media (min-width: $desktop) {
     left: 1px;
@@ -36,7 +38,7 @@
 
 .video__play-button {
   position: absolute;
-  top: 50%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 52px;
@@ -49,7 +51,7 @@
   align-items: center;
   border: none;
   outline: none;
-  background: linear-gradient(to right, #ed0233, #003eb7);
+  background: linear-gradient(97deg, rgba(237, 2, 51, 1) 17%, rgba(119, 32, 117, 1) 54%, rgba(0, 62, 183, 1) 90%);
   transition: transform 0.2s ease-in-out;
   z-index: 10;
 
@@ -69,7 +71,7 @@
     pointer-events: none;
     z-index: -1;
     box-sizing: border-box;
-    transition: opacity 0.2s ease, border-color 0.2s ease; /* Добавим transition для плавности */
+    transition: opacity 0.2s ease, border-color 0.2s ease;
   }
 
   &::after {
@@ -82,8 +84,7 @@
     height: 11px;
     background-color: $color-additional;
     clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
-    pointer-events: none; /* Чтобы не мешал кликам */
-    // transition: background-color 0.2s ease; /* Добавим transition для плавности */
+    pointer-events: none;
   }
 
 
@@ -91,7 +92,8 @@
     background: $color-additional;
   }
 
-  &:focus {
+  &:focus,
+  &:focus-visible {
     background: #c8c9cc;
   }
 
@@ -101,6 +103,7 @@
 
   &:disabled {
     background: $color-additional;
+    cursor: not-allowed;
   }
 
   &:hover::before {
@@ -109,14 +112,16 @@
   }
 
   &:focus::before,
+  &:focus-visible::before,
   &:active::before {
     opacity: 1;
-    border: 2px solid rgba(16, 38, 84, 1);
+    border: 2px solid $color-basis;
   }
 
   &:disabled::before {
-    opacity: 1;
-    border: 2px solid #9ba5b9;
+    border: 2px solid $color-basis;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    opacity: 0.4;
   }
 
   &:hover::after {
@@ -124,15 +129,20 @@
   }
 
   &:focus::after,
+  &:focus-visible::after,
   &:active::after {
-    background-color: rgba(16, 38, 84, 1);
+    background-color: $color-basis;
   }
 
   &:disabled::after {
-    background-color: #9ba5b9;
+    background-color: $color-basis;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    opacity: 0.4;
   }
 
   @media (min-width: $tablet) {
+    top: 50%;
+
     &::after {
       width: 9px;
       height: 12px;

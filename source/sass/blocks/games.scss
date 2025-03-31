@@ -216,15 +216,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
+  min-height: 60px;
 
   @media (min-width: $tablet) {
-    height: 66px;
+    min-height: 66px;
   }
 
   &:hover {
     background-color: $color-additional;
-    color: #ed0233;
+    color: $color-accent;
   }
 
   &:focus,
@@ -235,7 +235,27 @@
     opacity: 70%;
     border-color: #103aae;
   }
+
+  &:active {
+    background-color: $color-additional;
+    color: $color-basis;
+  }
 }
+
+.games__link[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.games__link[disabled]:hover,
+.games__link[disabled]:active,
+.games__link[disabled]:focus,
+.games__link[disabled]:focus-visible {
+  color: $color-additional;
+  background-color: transparent;
+  border: 2px solid $color-additional;
+}
+
 
 .games__image {
   display: block;

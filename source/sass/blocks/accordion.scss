@@ -49,6 +49,7 @@
 
   @media (min-width: $desktop) {
     width: auto;
+    max-width: 780px;
     font-size: $font-size-24;
     line-height: 24px;
   }
@@ -89,31 +90,6 @@
     rotate: 90deg;
   }
 
-  &:hover {
-    background-color: #1c3374;
-    border: none;
-  }
-
-  &:focus,
-  &:focus-visible {
-    background-color: #74819c;
-    outline: none;
-  }
-
-  &:hover::before,
-  &:hover::after {
-    background-color: $color-additional;
-    z-index: 1;
-  }
-
-  &:focus::before,
-  &:focus::after,
-  &:focus-visible::before,
-  &:focus-visible::after {
-    background-color: $color-additional;
-    z-index: 1;
-  }
-
   @media (min-width: $tablet) {
     width: 40px;
     height: 40px;
@@ -122,6 +98,42 @@
     &::after {
       width: 20px;
     }
+  }
+
+  &:not(:disabled):hover {
+    background-color: #1c3374;
+    border: none;
+  }
+
+  &:not(:disabled):focus,
+  &:not(:disabled):focus-visible {
+    background-color: #74819c;
+    outline: none;
+  }
+
+  &:not(:disabled):hover::before,
+  &:not(:disabled):hover::after {
+    background-color: $color-additional;
+    z-index: 1;
+  }
+
+  &:not(:disabled):focus::before,
+  &:not(:disabled):focus::after,
+  &:not(:disabled):focus-visible::before,
+  &:not(:disabled):focus-visible::after {
+    background-color: $color-additional;
+    z-index: 1;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &:disabled::after,
+  &:disabled::before {
+    opacity: 0.3;
   }
 }
 
