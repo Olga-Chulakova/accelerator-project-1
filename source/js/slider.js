@@ -40,4 +40,3 @@ const reviewsSwiper = new Swiper('.reviews__swiper', {
     prevEl: '.reviews__slider-button--next',
   }
 });
-

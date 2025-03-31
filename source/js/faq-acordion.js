@@ -58,4 +58,3 @@ const openedFirstAccordion = () => {
 };
 
 openedFirstAccordion();
-
