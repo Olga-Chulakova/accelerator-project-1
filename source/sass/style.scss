@@ -1,3 +1,6 @@
+/* Vendor */
+@import "./vendor/normalize";
+
 /* GLOBAL */
 @import "./common/variables";
 @import "./common/mixins";
@@ -31,6 +34,3 @@
 @import "./blocks/main-footer";
 @import "./blocks/navigation";
 @import "./blocks/social";
-
-/* Vendor */
-@import "./vendor/normalize";
