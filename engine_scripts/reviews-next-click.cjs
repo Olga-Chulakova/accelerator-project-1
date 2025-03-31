@@ -1,13 +1,11 @@
 module.exports = async (page, scenario, vp) => {
-  console.log('SCENARIO > ' + scenario.label);
+  console.log(`SCENARIO > ${ scenario.label}`);
 
   // add more ready handlers here...
-  await page.waitForFunction(() => {
-    return document.fonts.ready.then(() => {
-      console.log('Fonts loaded');
-      return true;
-    });
-  });
+  await page.waitForFunction(() => document.fonts.ready.then(() => {
+    console.log('Fonts loaded');
+    return true;
+  }));
 
   await page.evaluate((scenario) => {
     /** force load lazy images */
@@ -17,7 +15,7 @@ module.exports = async (page, scenario, vp) => {
     });
   }, scenario);
 
-  const [prev, next] = await page.$$(`[data-test="reviews"] button`);
+  const [prev, next] = await page.$$('[data-test="reviews"] button');
   await next.click();
   await page.waitForTimeout(scenario.delay || 0);
 };

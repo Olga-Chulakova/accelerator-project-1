@@ -14,15 +14,13 @@ faqButtons.forEach((faqButton) => {
     if (contentTab) {
       contentTab.classList.add('faq-tab__content--active');
 
-      // ===  НОВЫЙ КОД ДЛЯ ОТКРЫТИЯ ПЕРВОГО АККОРДЕОНА ===
-      const firstAccordion = contentTab.querySelector('.accordion__item'); // Находим первый аккордеон в ТЕКУЩЕМ табе
+      const firstAccordion = contentTab.querySelector('.accordion__item');
       if (firstAccordion) {
-        const accordionContent = firstAccordion.querySelector('.accordion__content'); // Находим контент первого аккордеона
+        const accordionContent = firstAccordion.querySelector('.accordion__content');
 
-        firstAccordion.classList.add('open'); // Открываем accordion__item
-        accordionContent.style.maxHeight = `${accordionContent.scrollHeight}px`; // Раскрываем контент
+        firstAccordion.classList.add('open');
+        accordionContent.style.maxHeight = `${accordionContent.scrollHeight}px`;
       }
-      // =============================================
     }
   });
 });

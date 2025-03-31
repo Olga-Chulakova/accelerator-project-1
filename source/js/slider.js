@@ -29,6 +29,8 @@ const juriSwiper = new Swiper('.juri__swiper', {
   }
 });
 
+juriSwiper.init();
+
 const reviewsSwiper = new Swiper('.reviews__swiper', {
   modules: [Navigation, Mousewheel],
   loop: false,
@@ -40,3 +42,5 @@ const reviewsSwiper = new Swiper('.reviews__swiper', {
     prevEl: '.reviews__slider-button--next',
   }
 });
+
+reviewsSwiper.init();

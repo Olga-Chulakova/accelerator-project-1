@@ -231,9 +231,9 @@
   &:focus-visible {
     outline: none;
     background-color: $color-additional;
-    color: #103aae;
+    color: $color-accent;
     opacity: 70%;
-    border-color: #103aae;
+    border-color: #000000;
   }
 
   &:active {
@@ -259,5 +259,5 @@
 
 .games__image {
   display: block;
-  background-color: $color-basis;
+  background-color: #ed0233;
 }
