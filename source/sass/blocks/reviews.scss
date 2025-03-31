@@ -250,6 +250,7 @@
   transform-origin: center center;
   object-position: -1px -13%;
   filter: brightness(1.2);
+  display: block;
 
   @media (min-width: $tablet) {
     object-position: -2px -13%;

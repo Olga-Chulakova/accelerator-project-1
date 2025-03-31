@@ -1,6 +1,6 @@
 .promo {
   background-image: linear-gradient(to right, #1c3477 39%, #1a3578 39%, #73184b 76%, #b4022a 100%);
-  background-size: cover; /* Или contain */
+  background-size: cover;
   background-position: center;
   padding-bottom: 32px;
 
@@ -11,6 +11,10 @@
   @media (min-width: $desktop) {
     padding-bottom: 120px;
   }
+}
+
+.promo__logo {
+  display: block;
 }
 
 .promo__nav {
@@ -291,6 +295,8 @@
 }
 
 .promo__hero-image {
+  display: block;
+
   @media (max-width: $mobile) {
     display: none;
   }

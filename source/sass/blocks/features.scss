@@ -33,25 +33,6 @@
   }
 }
 
-// .features__wrapper {
-//   @media (min-width: $tablet) {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-//     grid-template-rows: auto auto auto;
-//     row-gap: 39px;
-//     column-gap: 30px;
-//     width: 678px;
-//     margin: 0 auto;
-//   }
-
-//   @media (min-width: $desktop) {
-//     grid-template-columns: 1fr 1fr 1fr;
-//     grid-template-rows: auto auto;
-//     row-gap: 80px;
-//     column-gap: 40px;
-//   }
-// }
-
 .features__list {
   padding: 0;
   margin: 0;
@@ -60,13 +41,6 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 35px;
-
-  // @media (min-width: $tablet) {
-  //   width: 678px;
-  //   margin: 0 auto;
-  //   flex-direction: row;
-  //   gap: 0;
-  // }
 
   @media (min-width: $tablet) {
     width: 678px;
@@ -87,36 +61,6 @@
     row-gap: 80px;
   }
 }
-
-// .features__list:nth-of-type(odd) {
-//   grid-column: 1 / 2;
-// }
-
-// .features__list:nth-of-type(even) {
-//   grid-column: 2 / 3;
-// }
-
-// .features__list--first-wrapper {
-//   @media (min-width: $tablet) {
-//     grid-row: 1 / 2;
-//   }
-
-//   @media (min-width: $desktop) {
-//     grid-column: 1 / 4;
-//     grid-row: 1 / 2;
-//   }
-// }
-
-// .features__list--second-wrapper {
-//   @media (min-width: $tablet) {
-//     grid-row: 3 / 4;
-//   }
-
-//   @media (min-width: $desktop) {
-//     grid-column: 1 / 4;
-//     grid-row: 2 / 3;
-//   }
-// }
 
 .features__item {
   width: 290px;
@@ -139,7 +83,7 @@
       width: 100%;
       height: 2px;
       background-color: rgba(209, 10, 66, 0.2);
-      top: 150px;
+      bottom: -42px;
       left: 0;
     }
 
@@ -233,20 +177,6 @@
     grid-row: 2 / 3;
   }
 }
-
-// .features__item--sport {
-//   @media (min-width: $desktop) {
-//     grid-column: 1 / 2;
-//     grid-row: 3 / 4;
-//   }
-// }
-
-// .features__item--sport-1 {
-//   @media (min-width: $desktop) {
-//     grid-column: 3 / 4;
-//     grid-row: 3 / 4;
-//   }
-// }
 
 .features__number-wrapper {
   display: flex;

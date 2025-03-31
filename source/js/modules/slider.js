@@ -10,10 +10,6 @@ const juriSwiper = new Swiper('.juri__swiper', {
   allowTouchMove: true,
   slidesPerView: 1,
   spaceBetween: 40,
-  navigation: {
-    nextEl: '.juri__slider-button--prev',
-    prevEl: '.juri__slider-button--next',
-  },
   breakpoints: {
     320: {
       slidesPerView: 1,
@@ -26,7 +22,13 @@ const juriSwiper = new Swiper('.juri__swiper', {
       slidesPerView: 4,
       slidesPerGroup: 4,
     }
-  }
+  },
+  navigation: {
+    nextEl: '.juri__slider-button--prev',
+    prevEl: '.juri__slider-button--next',
+  },
+  simulateTouch: true,
+  touchRatio: 1,
 });
 
 juriSwiper.init();
@@ -40,7 +42,9 @@ const reviewsSwiper = new Swiper('.reviews__swiper', {
   navigation: {
     nextEl: '.reviews__slider-button--prev',
     prevEl: '.reviews__slider-button--next',
-  }
+  },
+  simulateTouch: true,
+  touchRatio: 1,
 });
 
 reviewsSwiper.init();

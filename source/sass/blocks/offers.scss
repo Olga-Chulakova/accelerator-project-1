@@ -80,11 +80,11 @@
   }
 }
 
-// .offers__poster-text > * {
-//   flex-shrink: 0;
-//   width: auto;
-//   max-width: 260px;
-// }
+.offers__poster-text > * {
+  flex-shrink: 0;
+  width: auto;
+  max-width: 260px;
+}
 
 .offers__poster-text p:nth-of-type(1) {
   font-family: $roboto;
@@ -254,6 +254,8 @@
 
 .offers__image {
   width: 100%;
+  background-image: #ed0233;
+  display: block;
 }
 
 .offers__list {

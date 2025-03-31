@@ -1,6 +1,6 @@
-import './iframe-video.js';
+import './modules/iframe-video.js';
 import './modules/price.js';
-import './slider.js';
-import './faq-tabs.js';
-import './faq-acordion.js';
-import './form.js';
+import './modules/slider.js';
+import './modules/faq-tabs.js';
+import './modules/faq-acordion.js';
+import './modules/form.js';

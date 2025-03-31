@@ -154,7 +154,7 @@
 
   &:disabled {
     opacity: 0.5;
-    cursor: not-allowed; // Добавляем, чтобы было понятно, что кнопка не кликабельна
+    cursor: not-allowed;
     pointer-events: none;
   }
 }
